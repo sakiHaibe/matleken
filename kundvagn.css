@@ -2,6 +2,7 @@
    KUNDVAGN.HTML - SHOPPING CART PAGE STYLING
    ========================= */
 
+
 /* Cart Icon in Header for kundvagn.html */
 .cart {
     position: absolute;
@@ -9,10 +10,12 @@
     right: 20px;
 }
 
+
 .cart img {
     width: 30px;
     height: 30px;
 }
+
 
 .cart-count {
     position: absolute;
@@ -25,16 +28,19 @@
     border-radius: 50%;
 }
 
+
 /* Cart Main Section for kundvagn.html */
 .item-info h3 {
     font-size: 18px;
     margin-bottom: 5px;
 }
 
+
 .item-info p {
     font-size: 16px;
     color: #666;
 }
+
 
 .item-quantity input {
     width: 50px;
@@ -42,10 +48,12 @@
     text-align: center;
 }
 
+
 .item-total .item-price {
     font-size: 18px;
     font-weight: bold;
 }
+
 
 /* Cart Summary Section for kundvagn.html */
 .cart-summary {
@@ -55,21 +63,25 @@
     border-top: 1px solid #ddd;
 }
 
+
 .summary-row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
+
 .summary-label {
     font-size: 18px;
     font-weight: bold;
 }
 
+
 .summary-value {
     font-size: 18px;
     color: #FF0000;
 }
+
 
 /* Checkout Button Styling for kundvagn.html */
 .checkout-btn {
@@ -84,9 +96,11 @@
     transition: background-color 0.3s;
 }
 
+
 .checkout-btn:hover {
     background-color: #0056b3;
 }
+
 
 /* =========================
    INDEX.HTML - GENERAL STYLING
@@ -101,6 +115,7 @@ body {
     color: #333333;
 }
 
+
 /* Header Styling for index.html */
 header {
     display: flex;
@@ -111,14 +126,17 @@ header {
     position: relative;
 }
 
+
 header .logo {
     position: absolute;
     left: 2rem;
 }
 
+
 header .logo img {
     height: 60px;
 }
+
 
 header nav ul {
     list-style: none;
@@ -127,6 +145,7 @@ header nav ul {
     display: flex;
     gap: 20px;
 }
+
 
 header nav ul li a {
     text-decoration: none;

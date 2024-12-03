@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomatiga Bönor med Svamp och Vitlök på Surdegsbröd - Matleken</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="kortlek orange.JPG" alt="Matleken Logotyp">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HEMMET</a></li>
+                <li><a href="recept.html">RECEPT</a></li>
+                <li><a href="#koden">KODEN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="recipe-detail">
+            <!-- Recipe Title and Image -->
+            <div class="recipe-header">
+                <img src="11123.png" alt="Tomatiga bönor med svamp och vitlök på surdegsbröd" class="recipe-img">
+                <h1>Tomatiga Bönor med Svamp och Vitlök på Surdegsbröd</h1>
+            </div>
+
+            <!-- Ingredients -->
+            <section class="ingredients">
+                <h2><span class="circle-icon">🍴</span> Ingredienser:</h2>
+                <ul>
+                    <li><span class="circle-icon">🔹</span> För bönröran:
+                        <ul>
+                            <li><span class="circle-icon">🔸</span> 2 burkar Cannellinibönor eller vita bönor (ca 400 g), avrunna och sköljda</li>
+                            <li><span class="circle-icon">🔸</span> 400 g Krossade tomater</li>
+                            <li><span class="circle-icon">🔸</span> 200 g Champinjoner eller skogssvamp, skivade</li>
+                            <li><span class="circle-icon">🔸</span> 1 lök, finhackad</li>
+                            <li><span class="circle-icon">🔸</span> 3 vitlöksklyftor, tunt skivade</li>
+                            <li><span class="circle-icon">🔸</span> 2 msk Olivolja</li>
+                            <li><span class="circle-icon">🔸</span> 1 msk Tomatpuré</li>
+                            <li><span class="circle-icon">🔸</span> 1 msk Rödvinsvinäger</li>
+                            <li><span class="circle-icon">🔸</span> 1 tsk Torkad timjan</li>
+                            <li><span class="circle-icon">🔸</span> 1 tsk Torkad oregano</li>
+                            <li><span class="circle-icon">🔸</span> 1 tsk Paprikapulver</li>
+                            <li><span class="circle-icon">🔸</span> Chiliflakes, efter smak (valfritt)</li>
+                            <li><span class="circle-icon">🔸</span> Salt och svartpeppar, efter smak</li>
+                            <li><span class="circle-icon">🔸</span> Färsk basilika eller persilja, för garnering</li>
+                        </ul>
+                    </li>
+                    <li><span class="circle-icon">🔹</span> För surdegsbrödet:
+                        <ul>
+                            <li><span class="circle-icon">🔸</span> 4 skivor Surdegsbröd</li>
+                            <li><span class="circle-icon">🔸</span> Olivolja, för pensling</li>
+                            <li><span class="circle-icon">🔸</span> 1 vitlöksklyfta, för gnidning</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Instructions -->
+            <section class="instructions">
+                <h2><span class="circle-icon">👨‍🍳</span> Instruktioner:</h2>
+                <ol>
+                    <li><input type="checkbox" id="step1"><label for="step1"> Förbered bönröran: Hetta upp olivoljan i en stor stekpanna eller gryta. Fräs lök och vitlök tills de är mjuka och doftande. Tillsätt svampen och stek tills den släppt sin vätska och blivit gyllene.</label></li>
+                    <li><input type="checkbox" id="step2"><label for="step2"> Tillsätt smakerna: Rör ner tomatpuré, torkade örter, paprikapulver och chiliflakes. Låt fräsa i någon minut. Tillsätt sedan krossade tomater och rödvinsvinäger. Låt såsen sjuda på låg värme i 10 minuter.</label></li>
+                    <li><input type="checkbox" id="step3"><label for="step3"> Blanda i bönorna: Vänd ner de avrunna bönorna i tomatsåsen. Låt puttra i ytterligare 5–7 minuter tills allt är väl genomvärmt. Smaka av med salt och peppar.</label></li>
+                    <li><input type="checkbox" id="step4"><label for="step4"> Rosta surdegsbrödet: Pensla brödskivorna med olivolja och grilla i en grillpanna eller rosta i ugnen tills de är gyllene och krispiga. Gnid varje skiva med en skivad vitlöksklyfta för extra smak.</label></li>
+                    <li><input type="checkbox" id="step5"><label for="step5"> Servera: Lägg de rostade surdegsbrödsskivorna på tallrikar. Skeda upp de tomatiga bönorna med svamp ovanpå. Garnera med färsk basilika eller persilja och eventuellt ett extra stänk olivolja.</label></li>
+                </ol>
+            </section>
+
+            <!-- Tips Section -->
+            <section class="tips">
+                <h3><span class="circle-icon">💡</span> Tips:</h3>
+                <p>För en extra lyxig touch, toppa med smulad fetaost eller vegansk ost, och servera med en fräsch sallad vid sidan av!</p>
+            </section>
+
+            <!-- Timer -->
+            <section class="timer-wrapper">
+                <h2><span class="circle-icon">⏰</span> Timer:</h2>
+                <div>
+                    <label for="set-time">Ställ in tid (i minuter):</label>
+                    <input type="number" id="set-time" min="1" value="30"> minuter
+                </div>
+                <div id="timer">30:00</div>
+                <button onclick="startTimer()">Starta timer</button>
+                <button onclick="stopTimer()">Stoppa timer</button>
+                <button onclick="resetTimer()">Återställ timer</button>
+            </section>
+
+            <!-- Back Link -->
+            <div class="back-link">
+                <a href="recept.html" class="back-button">Tillbaka till receptlistan</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Matleken UF - Alla rättigheter reserverade.</p>
+    </footer>
+
+    <script>
+        let timer;
+        let isRunning = false;
+        let seconds = 0;
+        let minutes = 30;  // Standardvärde för minuter, kan ändras av användaren
+    
+        // Starta timern
+        function startTimer() {
+            if (isRunning) return; // Om timern redan är igång, gör ingenting
+            isRunning = true;
+    
+            // Hämta användarens inmatade tid från inputfältet
+            let inputTime = document.getElementById("set-time").value;
+            minutes = parseInt(inputTime);  // Sätt minuter till användarens input
+            seconds = 0;  // Återställ sekunderna till 0 när vi startar om timern
+    
+            // Uppdatera timer på sidan när användaren ställer in tiden
+            document.getElementById("timer").innerText = formatTime(minutes, seconds);
+    
+            timer = setInterval(function() {
+                if (seconds === 0 && minutes === 0) {
+                    clearInterval(timer);  // Stoppar timern när den når 00:00
+                    alert("Tiden är slut!");
+                    isRunning = false;  // Ändra isRunning till false när tiden är slut
+                    return;
+                }
+    
+                // Minska sekunderna
+                if (seconds === 0) {
+                    if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                    }
+                } else {
+                    seconds--;
+                }
+    
+                // Uppdatera timer på sidan
+                document.getElementById("timer").innerText = formatTime(minutes, seconds);
+            }, 1000);
+        }
+    
+        // Stoppa timern
+        function stopTimer() {
+            clearInterval(timer);  // Stoppar timern
+            isRunning = false;
+        }
+    
+        // Återställ timern
+        function resetTimer() {
+            clearInterval(timer);  // Stoppar den aktuella timern
+            isRunning = false;
+            seconds = 0;
+    
+            // Hämta användarens valda starttid från inputfältet
+            let inputTime = document.getElementById("set-time").value;
+            minutes = parseInt(inputTime);  // Uppdatera minuter till det angivna värdet
+    
+            // Uppdatera timer-texten för att matcha starttiden
+            document.getElementById("timer").innerText = formatTime(minutes, seconds);
+        }
+    
+        // Format för att visa tiden på formatet MM:SS
+        function formatTime(minutes, seconds) {
+            return (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+        }
+    </script>
+
+</body>
+</html>

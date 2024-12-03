@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zucchiniplättar med Fetaost och Dill</title>
+    <link rel="stylesheet" href="ingredienser-instruktioner.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="kortlek orange.JPG" alt="Matleken Logotyp">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HEMMET</a></li>
+                <li><a href="recept.html">RECEPT</a></li>
+                <li><a href="#koden">KODEN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="recipe-card">
+        <h3>Zucchiniplättar med Fetaost och Dill</h3>
+        <img src="11114.png" alt="Zucchiniplättar med Fetaost och Dill" class="recipe-img">
+    </div>
+
+    <!-- Ingredienser Section -->
+    <section class="recipes">
+        <h2>🍴 Ingredienser (4 portioner):</h2>
+        <div class="recipe-card">
+            <h3>Zucchini</h3>
+            <p>2 st (ca 500 g)</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Fetaost</h3>
+            <p>150 g, smulad</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Ägg</h3>
+            <p>2 st</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Vetemjöl</h3>
+            <p>1 dl (eller mandelmjöl för en glutenfri variant)</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Färsk dill</h3>
+            <p>3 msk, finhackad</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Vårlök</h3>
+            <p>2 st, finhackade (eller en liten gul lök)</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Vitlöksklyfta</h3>
+            <p>1 st, riven</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Salt</h3>
+            <p>½ tsk</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Svartpeppar</h3>
+            <p>Efter smak</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Olivolja eller smör</h3>
+            <p>För stekning</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Till servering</h3>
+            <p>Grekisk yoghurt eller tzatziki, citronklyftor, sallad eller färska grönsaker</p>
+        </div>
+    </section>
+
+    <!-- Instruktioner Section -->
+    <section class="recipes">
+        <h2>👨‍🍳 Instruktioner:</h2>
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="step1"> Steg 1</h3>
+            <label for="step1">
+                <p>Förbered zucchinin: Riv zucchinin grovt och lägg den i ett durkslag. Strö över saltet och låt stå i ca 10 minuter för att dra ur vätskan. Pressa sedan ur så mycket vätska som möjligt med händerna eller en ren kökshandduk.</p>
+            </label>
+        </div>
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="step2"> Steg 2</h3>
+            <label for="step2">
+                <p>Blanda smeten: I en stor skål, vispa upp äggen. Tillsätt den urpressade zucchinin, smulad fetaost, hackad dill, vårlök och vitlök. Blanda ner mjölet och rör om tills smeten är jämn. Krydda med svartpeppar.</p>
+            </label>
+        </div>
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="step3"> Steg 3</h3>
+            <label for="step3">
+                <p>Stek plättarna: Hetta upp olivolja eller smör i en stekpanna på medelvärme. Klicka ut smeten med en sked och platta till så att de blir platta plättar. Stek i 3–4 minuter per sida tills de är gyllenbruna och genomstekta.</p>
+            </label>
+        </div>
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="step4"> Steg 4</h3>
+            <label for="step4">
+                <p>Servera: Lägg upp plättarna på ett fat och servera med en klick grekisk yoghurt eller tzatziki. Garnera med citronklyftor och servera med en fräsch sallad.</p>
+            </label>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="tips">
+        <h3><span class="circle-icon">💡</span> Tips:</h3>
+        <p>För extra crunch, tillsätt en näve hackade nötter eller solrosfrön i smeten. Plättarna är även goda att förbereda i förväg och värma upp vid servering!</p>
+    </section>
+</body>
+</html>
+
+            <!-- Timer -->
+            <section class="timer-wrapper">
+                <h2><span class="circle-icon">⏰</span> Timer:</h2>
+                <div>
+                    <label for="set-time">Ställ in tid (i minuter):</label>
+                    <input type="number" id="set-time" min="1" value="30"> minuter
+                </div>
+                <div id="timer">30:00</div>
+                <button onclick="startTimer()">Starta timer</button>
+                <button onclick="stopTimer()">Stoppa timer</button>
+                <button onclick="resetTimer()">Återställ timer</button>
+            </section>
+
+            <!-- Back Link -->
+            <div class="back-link">
+                <a href="recept.html" class="back-button">Tillbaka till receptlistan</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Matleken UF - Alla rättigheter reserverade.</p>
+    </footer>
+
+    <script>
+        let timer;
+        let isRunning = false;
+        let seconds = 0;
+        let minutes = 30;  // Standardvärde för minuter, kan ändras av användaren
+    
+        // Starta timern
+        function startTimer() {
+            if (isRunning) return; // Om timern redan är igång, gör ingenting
+            isRunning = true;
+    
+            // Hämta användarens inmatade tid från inputfältet
+            let inputTime = document.getElementById("set-time").value;
+            minutes = parseInt(inputTime);  // Sätt minuter till användarens input
+            seconds = 0;  // Återställ sekunderna till 0 när vi startar om timern
+    
+            // Uppdatera timer på sidan när användaren ställer in tiden
+            document.getElementById("timer").innerText = formatTime(minutes, seconds);
+    
+            timer = setInterval(function() {
+                if (seconds === 0 && minutes === 0) {
+                    clearInterval(timer);  // Stoppar timern när den når 00:00
+                    alert("Tiden är slut!");
+                    isRunning = false;  // Ändra isRunning till false när tiden är slut
+                    return;
+                }
+    
+                // Minska sekunderna
+                if (seconds === 0) {
+                    if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                    }
+                } else {
+                    seconds--;
+                }
+    
+                // Uppdatera timer på sidan
+                document.getElementById("timer").innerText = formatTime(minutes, seconds);
+            }, 1000);
+        }
+    
+        // Stoppa timern
+        function stopTimer() {
+            clearInterval(timer);  // Stoppar timern
+            isRunning = false;
+        }
+    
+        // Återställ timern
+        function resetTimer() {
+            clearInterval(timer);  // Stoppar den aktuella timern
+            isRunning = false;
+            seconds = 0;
+    
+            // Hämta användarens valda starttid från inputfältet
+            let inputTime = document.getElementById("set-time").value;
+            minutes = parseInt(inputTime);  // Uppdatera minuter till det angivna värdet
+    
+            // Uppdatera timer-texten för att matcha starttiden
+            document.getElementById("timer").innerText = formatTime(minutes, seconds);
+        }
+    
+        // Format för att visa tiden på formatet MM:SS
+        function formatTime(minutes, seconds) {
+            return (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rostad Tomatsoppa med Vitlöksbröd - Matleken</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="kortlek orange.JPG" alt="Matleken Logotyp">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HEMMET</a></li>
+                <li><a href="recept.html">RECEPT</a></li>
+                <li><a href="#koden">KODEN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="recipe-detail">
+            <!-- Recipe Title and Image -->
+            <div class="recipe-header">
+                <img src="11129.png" alt="Rostad Tomatsoppa med Vitlöksbröd" class="recipe-img">
+                <h1>Rostad Tomatsoppa med Vitlöksbröd</h1>
+            </div>
+
+            <!-- Ingredients -->
+            <section class="ingredients">
+                <h2><span class="circle-icon">🍴</span> Ingredienser (4 portioner):</h2>
+                <h3>Tomatsoppa:</h3>
+                <ul>
+                    <li><span class="circle-icon">🔹</span> Färska tomater – 1 kg, halverade</li>
+                    <li><span class="circle-icon">🔹</span> Rödlök – 1 st, klyftad</li>
+                    <li><span class="circle-icon">🔹</span> Vitlök – 4 klyftor, hela med skalet kvar</li>
+                    <li><span class="circle-icon">🔹</span> Olivolja – 3 msk</li>
+                    <li><span class="circle-icon">🔹</span> Salt och peppar – efter smak</li>
+                    <li><span class="circle-icon">🔹</span> Grönsaksbuljong – 7 dl</li>
+                    <li><span class="circle-icon">🔹</span> Tomatpuré – 1 msk</li>
+                    <li><span class="circle-icon">🔹</span> Torkad timjan – 1 tsk</li>
+                    <li><span class="circle-icon">🔹</span> Socker – 1 tsk (valfritt, för att balansera syran)</li>
+                    <li><span class="circle-icon">🔹</span> Grädde eller havregrädde – 1 dl (valfritt för en krämigare soppa)</li>
+                </ul>
+                <h3>Vitlöksbröd:</h3>
+                <ul>
+                    <li><span class="circle-icon">🔹</span> Baguette eller surdegsbröd – 1 st, skivad</li>
+                    <li><span class="circle-icon">🔹</span> Smör – 50 g, mjukt</li>
+                    <li><span class="circle-icon">🔹</span> Vitlök – 2 klyftor, pressade</li>
+                    <li><span class="circle-icon">🔹</span> Färsk persilja – 2 msk, finhackad</li>
+                    <li><span class="circle-icon">🔹</span> Riven parmesan – 2 msk (valfritt)</li>
+                </ul>
+            </section>
+
+            <!-- Instructions -->
+            <section class="instructions">
+                <h2><span class="circle-icon">👨‍🍳</span> Instruktioner:</h2>
+                <ol>
+                    <li><input type="checkbox" id="step1"><label for="step1"> Rostad Tomatsoppa: Sätt ugnen på 200°C. Lägg tomater, rödlök och vitlöksklyftor på en plåt klädd med bakplåtspapper. Ringla över olivolja och strö över salt och peppar.</label></li>
+                    <li><input type="checkbox" id="step2"><label for="step2"> Rosta grönsakerna: Rosta i ugnen i 25–30 minuter, tills grönsakerna är mjuka och lätt karamelliserade.</label></li>
+                    <li><input type="checkbox" id="step3"><label for="step3"> Gör soppbasen: Ta ut plåten från ugnen och låt vitlöken svalna något. Kläm sedan ut den rostade vitlökskrämen från skalet. Häll grönsakerna (inklusive olivoljan från plåten) i en stor kastrull. Tillsätt buljong, tomatpuré, timjan och socker.</label></li>
+                    <li><input type="checkbox" id="step4"><label for="step4"> Mixa soppan: Använd en stavmixer för att mixa soppan slät. Vill du ha en extra len soppa, sila den genom en finmaskig sil. Tillsätt grädden om du önskar och värm upp igen. Smaka av med salt och peppar.</label></li>
+                    <li><input type="checkbox" id="step5"><label for="step5"> Vitlöksbröd: Förbered vitlökssmöret: Blanda det mjuka smöret med pressad vitlök, persilja och parmesan om du använder det.</label></li>
+                    <li><input type="checkbox" id="step6"><label for="step6"> Grilla brödet: Bred vitlökssmöret på brödskivorna. Lägg dem på en plåt och grilla i ugnen på 225°C i 5–7 minuter tills de är gyllene och krispiga.</label></li>
+                    <li><input type="checkbox" id="step7"><label for="step7"> Servering: Häll upp den varma tomatsoppan i skålar och servera med de nygrillade vitlöksbröden vid sidan. Garnera gärna med en skvätt olivolja, färsk basilika eller lite riven parmesan.</label></li>
+                </ol>
+            </section>
+
+            <!-- Timer Wrapper -->
+            <section class="timer-wrapper">
+                <h2><span class="circle-icon">⏰</span> Timer:</h2>
+                <div>
+                    <label for="set-time">Ställ in tid (i minuter):</label>
+                    <input type="number" id="set-time" min="1" value="35"> minuter
+                </div>
+                <div id="timer">35:00</div>
+                <button onclick="startTimer()">Starta timer</button>
+                <button onclick="stopTimer()">Stoppa timer</button>
+                <button onclick="resetTimer()">Återställ timer</button>
+            </section>
+
+            <!-- Back Link -->
+            <div class="back-link">
+                <a href="recept.html" class="back-button">Tillbaka till receptlistan</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Matleken UF - Alla rättigheter reserverade.</p>
+    </footer>
+</body>
+</html>
+
+<script>
+    let timer;
+    let isRunning = false;
+    let seconds = 0;
+    let minutes = 35;  // Standardvärde för minuter, kan ändras av användaren
+
+    // Starta timern
+    function startTimer() {
+        if (isRunning) return; // Om timern redan är igång, gör ingenting
+        isRunning = true;
+
+        // Hämta användarens inmatade tid från inputfältet
+        let inputTime = document.getElementById("set-time").value;
+        minutes = parseInt(inputTime);  // Sätt minuter till användarens input
+        seconds = 0;  // Återställ sekunderna till 0 när vi startar om timern
+
+        // Uppdatera timer på sidan när användaren ställer in tiden
+        document.getElementById("timer").innerText = formatTime(minutes, seconds);
+
+        timer = setInterval(function() {
+            if (seconds === 0 && minutes === 0) {
+                clearInterval(timer);  // Stoppar timern när den når 00:00
+                alert("Tiden är slut!");
+                isRunning = false;  // Ändra isRunning till false när tiden är slut
+                return;
+            }
+
+            // Minska sekunderna
+            if (seconds === 0) {
+                if (minutes > 0) {
+                    minutes--;
+                    seconds = 59;
+                }
+            } else {
+                seconds--;
+            }
+
+            // Uppdatera timer på sidan
+            document.getElementById("timer").innerText = formatTime(minutes, seconds);
+        }, 1000); // Uppdatera varje sekund
+    }
+
+    // Stoppa timern
+    function stopTimer() {
+        clearInterval(timer);
+        isRunning = false;
+    }
+
+    // Återställ timern
+    function resetTimer() {
+        clearInterval(timer);
+        isRunning = false;
+        seconds = 0;
+        minutes = 35;  // Återställ till standardvärde
+        document.getElementById("timer").innerText = formatTime(minutes, seconds);
+    }
+
+    // Formatera tiden till MM:SS
+    function formatTime(minutes, seconds) {
+        return (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+    }
+</script>
+

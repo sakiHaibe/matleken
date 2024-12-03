@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risonisallad</title>
+    <link rel="stylesheet" href="ingredienser-instruktioner.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="kortlek orange.JPG" alt="Matleken Logotyp">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HEMMET</a></li>
+                <li><a href="recept.html">RECEPT</a></li>
+                <li><a href="#koden">KODEN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="recipe-card">
+        <h3>Risonisallad</h3>
+        <img src="11117.png" alt="Risonisallad" class="recipe-img">
+    </div>
+
+    <!-- Ingredienser Section -->
+    <section class="recipes">
+        <h2>🍴 Ingredienser (4 portioner):</h2>
+        <div class="recipe-card">
+            <h3>Risoni</h3>
+            <p>3 dl</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Körsbärstomater</h3>
+            <p>250 g, halverade</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Gurka</h3>
+            <p>1 st, tärnad</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Fetaost</h3>
+            <p>150 g, smulad (eller veganskt alternativ)</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Rödlök</h3>
+            <p>1 liten, tunt skivad</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Svarta oliver</h3>
+            <p>1 dl, urkärnade</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Rostade solrosfrön</h3>
+            <p>½ dl (eller pumpakärnor)</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Färsk spenat</h3>
+            <p>2 nävar</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Färska örter</h3>
+            <p>T.ex. basilika och persilja, hackade</p>
+        </div>
+        <h3>Dressing:</h3>
+        <div class="recipe-card">
+            <h3>Olivolja</h3>
+            <p>3 msk</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Citronsaft</h3>
+            <p>2 msk</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Vitlök</h3>
+            <p>1 liten klyfta, riven</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Honung</h3>
+            <p>1 tsk (eller agavesirap för veganskt)</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Salt och peppar</h3>
+            <p>Efter smak</p>
+        </div>
+    </section>
+
+    <!-- Instruktioner Section -->
+    <section class="recipes">
+        <h2>👨‍🍳 Instruktioner:</h2>
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="step1"> Steg 1</h3>
+            <label for="step1">
+                <p>Koka risonin: Koka risonin enligt förpackningens anvisningar i lättsaltat vatten. Häll av vattnet och låt svalna.</p>
+            </label>
+        </div>
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="step2"> Steg 2</h3>
+            <label for="step2">
+                <p>Förbered grönsakerna: Skär körsbärstomater, gurka och rödlök. Blanda dessa i en stor skål tillsammans med spenat, svarta oliver och smulad fetaost.</p>
+            </label>
+        </div>
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="step3"> Steg 3</h3>
+            <label for="step3">
+                <p>Rosta frön: Rosta solrosfrön eller pumpakärnor i en torr panna tills de är gyllene. Låt svalna och strö över salladen.</p>
+            </label>
+        </div>
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="step4"> Steg 4</h3>
+            <label for="step4">
+                <p>Blanda dressing: Vispa ihop olivolja, citronsaft, riven vitlök, honung, salt och peppar i en liten skål. Justera smakerna efter behov.</p>
+            </label>
+        </div>
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="step5"> Steg 5</h3>
+            <label for="step5">
+                <p>Blanda salladen: Blanda den kokta och avsvalnade risonin med grönsakerna i skålen. Häll över dressingen och blanda väl.</p>
+            </label>
+        </div>
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="step6"> Steg 6</h3>
+            <label for="step6">
+                <p>Servera: Toppa med hackade örter och de rostade fröna. Servera som en lätt huvudrätt eller som tillbehör till grillade grönsaker eller bröd.</p>
+            </label>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="tips">
+        <h3><span class="circle-icon">💡</span> Tips:</h3>
+        <p>Vill du göra salladen mer matig? Tillsätt grillade grönsaker som zucchini eller aubergine, eller blanda ner kokta kikärtor för extra protein.</p>
+    </section>
+</body>
+</html>
+
+            <!-- Timer -->
+            <section class="timer-wrapper">
+                <h2><span class="circle-icon">⏰</span> Timer:</h2>
+                <div>
+                    <label for="set-time">Ställ in tid (i minuter):</label>
+                    <input type="number" id="set-time" min="1" value="30"> minuter
+                </div>
+                <div id="timer">30:00</div>
+                <button onclick="startTimer()">Starta timer</button>
+                <button onclick="stopTimer()">Stoppa timer</button>
+                <button onclick="resetTimer()">Återställ timer</button>
+            </section>
+
+            <!-- Back Link -->
+            <div class="back-link">
+                <a href="recept.html" class="back-button">Tillbaka till receptlistan</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Matleken UF - Alla rättigheter reserverade.</p>
+    </footer>
+
+    <script>
+        let timer;
+        let isRunning = false;
+        let seconds = 0;
+        let minutes = 30;  // Standardvärde för minuter, kan ändras av användaren
+    
+        // Starta timern
+        function startTimer() {
+            if (isRunning) return; // Om timern redan är igång, gör ingenting
+            isRunning = true;
+    
+            // Hämta användarens inmatade tid från inputfältet
+            let inputTime = document.getElementById("set-time").value;
+            minutes = parseInt(inputTime);  // Sätt minuter till användarens input
+            seconds = 0;  // Återställ sekunderna till 0 när vi startar om timern
+    
+            // Uppdatera timer på sidan när användaren ställer in tiden
+            document.getElementById("timer").innerText = formatTime(minutes, seconds);
+    
+            timer = setInterval(function() {
+                if (seconds === 0 && minutes === 0) {
+                    clearInterval(timer);  // Stoppar timern när den når 00:00
+                    alert("Tiden är slut!");
+                    isRunning = false;  // Ändra isRunning till false när tiden är slut
+                    return;
+                }
+    
+                // Minska sekunderna
+                if (seconds === 0) {
+                    if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                    }
+                } else {
+                    seconds--;
+                }
+    
+                // Uppdatera timer på sidan
+                document.getElementById("timer").innerText = formatTime(minutes, seconds);
+            }, 1000);
+        }
+    
+        // Stoppa timern
+        function stopTimer() {
+            clearInterval(timer);  // Stoppar timern
+            isRunning = false;
+        }
+    
+        // Återställ timern
+        function resetTimer() {
+            clearInterval(timer);  // Stoppar den aktuella timern
+            isRunning = false;
+            seconds = 0;
+    
+            // Hämta användarens valda starttid från inputfältet
+            let inputTime = document.getElementById("set-time").value;
+            minutes = parseInt(inputTime);  // Uppdatera minuter till det angivna värdet
+    
+            // Uppdatera timer-texten för att matcha starttiden
+            document.getElementById("timer").innerText = formatTime(minutes, seconds);
+        }
+    
+        // Format för att visa tiden på formatet MM:SS
+        function formatTime(minutes, seconds) {
+            return (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+        }
+    </script>
+
+</body>
+</html>

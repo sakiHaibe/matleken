@@ -1,0 +1,362 @@
+/* =========================
+   RECEPT.HTML - GENERAL STYLING
+   ========================= */
+
+/* General Settings */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fbb478;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fbb478;
+    position: relative;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3b11b2;
+}
+
+/* Hero Section Styling */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #fbb478;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: #454545;
+}
+
+/* Search Box Styling */
+.search {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.search input {
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Recipes Container */
+.recipes-container {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #fbb478;
+    color: #fbb478;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Styling for Ingredienser/Instruktioner Sections */
+.recipes {
+    margin-bottom: 40px; /* Space between sections */
+}
+
+.recipes h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
+}
+
+/* Card Layout for Items */
+.recipes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive layout */
+    gap: 20px;
+}
+
+.recipe-card {
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Hover Effect */
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Typography */
+.recipe-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #4caf50;
+}
+
+.recipe-card p {
+    margin: 0;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Add animation on hover to allow moving left/right/up/down */
+.recipe-card:hover {
+    animation: float 3s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(3px, -3px);
+    }
+    50% {
+        transform: translate(0, -5px);
+    }
+    75% {
+        transform: translate(-3px, -3px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Larger Checkbox Styling */
+input[type="checkbox"] {
+    width: 25px; /* Increased width */
+    height: 25px; /* Increased height */
+    cursor: pointer; /* Makes it clickable */
+    margin-right: 10px; /* Space between checkbox and label */
+}
+
+input[type="checkbox"]:checked {
+    accent-color: #4caf50; /* Green color for checked state (modern browsers support this) */
+}
+/* Hide Default Checkbox */
+input[type="checkbox"] {
+    appearance: none; /* Removes default styling */
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Checked State */
+input[type="checkbox"]:checked {
+    background-color: #4caf50; /* Green fill */
+    border-color: #4caf50;
+    position: relative;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "✔"; /* Checkmark */
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    left: 5px;
+}
+
+
+/* Timer Styling */
+.timer-wrapper {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.timer-wrapper h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.timer-controls {
+    margin-bottom: 15px;
+}
+
+.timer-controls label {
+    font-size: 1rem;
+    color: #333;
+}
+
+.timer-controls input {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 80px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.styled-timer {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff4500; /* Orange color for timer */
+    margin: 15px 0;
+}
+
+.timer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-timer {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-timer.start {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+.btn-timer.start:hover {
+    background-color: #218838;
+}
+
+.btn-timer.stop {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+.btn-timer.stop:hover {
+    background-color: #c82333;
+}
+
+.btn-timer.reset {
+    background-color: #ffc107; /* Yellow */
+    color: white;
+}
+
+.btn-timer.reset:hover {
+    background-color: #e0a800;
+}
+
+/* Back Link Styling */
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #007bff; /* Blue */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+.back-button:focus {
+    outline: none;
+    box-shadow: 0 0 3px #007bff;
+}
+
+/* Recipe Images */
+.recipe-img {
+    width: 100%; /* Full width of the card */
+    max-height: 150px; /* Limit the height */
+    object-fit: cover; /* Crop the image neatly */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 10px; /* Space below the image */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
+}
+
+/* Tips Section Styling */
+.tips {
+    background-color: #fffbea; /* Light yellow background */
+    border-left: 5px solid #ffeb3b; /* Yellow border to highlight */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px auto; /* Center and add spacing */
+    padding: 20px; /* Add padding */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 800px; /* Limit max width */
+    font-size: 1rem; /* Standard text size */
+    color: #333; /* Text color */
+}
+
+.tips h3 {
+    font-size: 1.5rem; /* Slightly larger heading */
+    color: #ff9800; /* Orange heading */
+    margin-bottom: 10px; /* Space below the heading */
+    display: flex;
+    align-items: center;
+}
+
+.tips h3 .circle-icon {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.tips p {
+    font-size: 1rem; /* Standard paragraph size */
+    margin: 0; /* Remove default margin */
+    line-height: 1.5; /* Improve readability */
+}

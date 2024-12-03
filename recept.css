@@ -1,0 +1,341 @@
+/* =========================
+   RECEPT.HTML - GENERAL STYLING
+   ========================= */
+
+/* General Settings */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fbb478;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fbb478;
+    position: relative;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3b11b2;
+}
+
+/* Hero Section Styling */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #fbb478;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: #454545;
+}
+
+/* Search Box Styling */
+.search {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.search input {
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Recipes Container */
+.recipes-container {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Recipes Styling */
+.recipes {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 30px; /* More space between cards */
+}
+
+.recipe-card {
+    background-color: #fff;
+    padding: 1.5rem; /* Increased padding for breathing space inside each card */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Slightly darker shadow for better separation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05); /* Slight zoom-in on hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+.recipe-img {
+    max-width: 100%;
+    border-radius: 5px;
+    height: auto;
+    margin-bottom: 1rem; /* Space between the image and recipe information */
+}
+
+.recipe-info h3 {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.recipe-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem; /* Space below description paragraph */
+}
+
+.recipe-link {
+    font-size: 1rem;
+    color: #6c63ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.recipe-link:hover {
+    color: #0056ff; /* Color change on hover */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px 1rem;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #666;
+}
+/* =========================
+   INDEX.HTML - GENERAL STYLING
+   ========================= */
+   
+/* General Settings */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fbb478;
+    color: #333333;
+}
+
+/* Header Styling for index.html */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fbb478;
+    position: relative;
+}
+
+header .logo {
+    position: absolute;
+    left: 2rem;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3b11b2;
+}
+/* =========================
+   KUNDVAGN.HTML - SHOPPING CART PAGE STYLING
+   ========================= */
+
+/* Cart Icon in Header for kundvagn.html */
+.cart {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.cart img {
+    width: 30px;
+    height: 30px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+/* Cart Main Section for kundvagn.html */
+.item-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.item-info p {
+    font-size: 16px;
+    color: #666;
+}
+
+.item-quantity input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+}
+
+.item-total .item-price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Cart Summary Section for kundvagn.html */
+.cart-summary {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.summary-value {
+    font-size: 18px;
+    color: #FF0000;
+}
+
+/* Checkout Button Styling for kundvagn.html */
+.checkout-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #0056b3;
+}
+
+/* =========================
+   INDEX.HTML - GENERAL STYLING
+   ========================= */
+   
+/* General Settings */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fbb478;
+    color: #333333;
+}
+
+/* Header Styling for index.html */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fbb478;
+    position: relative;
+}
+
+header .logo {
+    position: absolute;
+    left: 2rem;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3b11b2;
+}
+
+ /* Change the product's image scale when hovered */
+ .product:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.add-to-cart {
+    display: inline-block;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3; /* Darker blue when hovered */
+}

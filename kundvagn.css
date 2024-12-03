@@ -1,0 +1,135 @@
+/* =========================
+   KUNDVAGN.HTML - SHOPPING CART PAGE STYLING
+   ========================= */
+
+/* Cart Icon in Header for kundvagn.html */
+.cart {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.cart img {
+    width: 30px;
+    height: 30px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+/* Cart Main Section for kundvagn.html */
+.item-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.item-info p {
+    font-size: 16px;
+    color: #666;
+}
+
+.item-quantity input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+}
+
+.item-total .item-price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Cart Summary Section for kundvagn.html */
+.cart-summary {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.summary-value {
+    font-size: 18px;
+    color: #FF0000;
+}
+
+/* Checkout Button Styling for kundvagn.html */
+.checkout-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #0056b3;
+}
+
+/* =========================
+   INDEX.HTML - GENERAL STYLING
+   ========================= */
+   
+/* General Settings */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fbb478;
+    color: #333333;
+}
+
+/* Header Styling for index.html */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fbb478;
+    position: relative;
+}
+
+header .logo {
+    position: absolute;
+    left: 2rem;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3b11b2;
+}

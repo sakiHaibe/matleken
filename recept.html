@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Din Varukorg - Matleken</title>
+    <link rel="stylesheet" href="recept.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="kortlek orange.JPG" alt="Matleken Logotyp">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HEMMET</a></li>
+                <li><a href="recept.html">RECEPT</a></li>
+                <li><a href="kundvagn.html">KUNDVAGN</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Recept</h1>
+            <p>Upptäck läckra och enkla recept som passar alla. Sök efter ditt favoritrecept!</p>
+        </section>
+
+        <section class="search">
+            <input type="text" id="searchInput" placeholder="Sök recept..." onkeyup="searchRecipes()">
+        </section>
+
+        <section class="recipes" id="recipeList">
+            <!-- Recept Collection -->
+            <div class="recipe-card">
+                <img src="11111.png" alt="Lasagne med halloumi" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>Lasagne med halloumi, spenat och pumpakärnor</h3>
+                    <p>En härlig lasagne med halloumi, spenat och rostade pumpakärnor. Perfekt för alla som älskar vegetariskt!</p>
+                    <a href="lasagne.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11112.png" alt="Palak Paneer" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>Palak Paneer</h3>
+                    <p>En klassisk indisk rätt med spenat och paneer i en smakrik curry. Enkel och full av smak.</p>
+                    <a href="palak.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+
+            </div>
+            <div class="recipe-card">
+                <img src="11113.png" alt="Linscurry med kokosmjölk och lime" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11113 Linscurry med kokosmjölk och lime</h3>
+                    <p>En smakrik linscurry med kokosmjölk och en frisk touch av lime. En perfekt middag när du vill ha något snabbt och gott.</p>
+                    <a href="linscurry.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11114.png" alt="Zucchiniplättar med fetaost och dill" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11114 Zucchiniplättar med fetaost och dill</h3>
+                    <p>Lätta och fräscha zucchiniplättar med krämig fetaost och smakrik dill. Perfekt som lunch eller som tillbehör.</p>
+                    <a href="zucchinipletter.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11115.png" alt="Spaghetti med linsbolognese" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11115 Spaghetti med linsbolognese</h3>
+                    <p>En vegetarisk version av den klassiska bolognesen med linser istället för kött. Lika god och fylld med smak!</p>
+                    <a href="linsbolognese.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11116.png" alt="Morotssoppa med kokos" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11116 Morotssoppa med kokos</h3>
+                    <p>En len och krämig morotssoppa med en härlig smak av kokos. Värmande och perfekt för kalla dagar.</p>
+                    <a href="morotssoppa.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11117.png" alt="Risonisallad" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11117 Risonisallad</h3>
+                    <p>Fräsch och lätt risonisallad med grönsaker och en härlig citron-dressing. Perfekt som en sommarlunch eller ett tillbehör till grillat.</p>
+                    <a href="risonisallad.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11118.png" alt="Halloumipytt med örtsmör och senapskräm" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11118 Halloumipytt med örtsmör och senapskräm</h3>
+                    <p>En mättande och smakrik pytt med halloumi, toppad med krämigt örtsmör och senapskräm. En enkel och snabb middag.</p>
+                    <a href="halloumipytt.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11119.png" alt="BBQ-kryddade grillost nuggets med ostgratinerad potatis och majssallad" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11119 BBQ-kryddade grillost nuggets med ostgratinerad potatis och majssallad</h3>
+                    <p>Smakrika BBQ-kryddade grillost nuggets serveras med ostgratinerad potatis och en fräsch majssallad. Perfekt för en helgmiddag!</p>
+                    <a href="bbqgrillost.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11120.png" alt="Miso mac and cheese" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11120 Miso mac and cheese</h3>
+                    <p>En härlig twist på den klassiska mac and cheese med smakrik miso och smältande ost. En comfort food för alla!</p>
+                    <a href="misomacandcheese.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11121.png" alt="Taquitos på svarta bönor" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11121 Taquitos på svarta bönor</h3>
+                    <p>Smakrika och krispiga taquitos fyllda med svarta bönor, perfekt för en snabb och enkel middag eller som snack.</p>
+                    <a href="taquitos.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11122.webp" alt="Färgglad dhal chaat-gryta" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11122 Färgglad dhal chaat-gryta</h3>
+                    <p>En indisk inspirerad dhal med fräscha smaker och kryddor, toppad med en härlig chaat-sås. En riktig smakexplosion!</p>
+                    <a href="dhalchaat.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11123.png" alt="Tomatiga bönor med svamp och vitlök på surdegsbröd" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11123 Tomatiga bönor med svamp och vitlök på surdegsbröd</h3>
+                    <p>En smakrik rätt med tomatiga bönor, svamp och vitlök serverade på knaprigt surdegsbröd. Enkel men så god!</p>
+                    <a href="tomatigabonor.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <!-- New recipes added here -->
+            <div class="recipe-card">
+                <img src="11124.png" alt="Sweet chilinudlar med cashewnötter" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11124 Sweet chilinudlar med cashewnötter</h3>
+                    <p>Smakrika sweet chilinudlar med krispiga cashewnötter, perfekt för en snabb middag eller som ett gott tillbehör.</p>
+                    <a href="chilinudlar.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11125.png" alt="Tacopiroger" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11125 Tacopiroger</h3>
+                    <p>Små, krispiga piroger fyllda med tacofärs, ost och grönsaker. En perfekt bjudrätt eller middag!</p>
+                    <a href="tacopiroger.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11126.png" alt="Paj med spenat, feta och soltorkade tomater" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11126 Paj med spenat, feta och soltorkade tomater</h3>
+                    <p>En härlig paj med spenat, krämig fetaost och smakrika soltorkade tomater. Perfekt för lunch eller middag.</p>
+                    <a href="spenatpaj.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11127.png" alt="Risotto med kantareller och brynt mandelsmör" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11127 Risotto med kantareller och brynt mandelsmör</h3>
+                    <p>En lyxig risotto med kantareller och härligt brynt mandelsmör. En perfekt höstmiddag!</p>
+                    <a href="kantarellrisotto.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11128.png" alt="Vitlöksrostad spetskål med örtig smörsås och hasselnötter" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11128 Vitlöksrostad spetskål med örtig smörsås och hasselnötter</h3>
+                    <p>Smakrik vitlöksrostad spetskål toppad med örtig smörsås och rostade hasselnötter. En härlig vegetarisk rätt!</p>
+                    <a href="spetskål.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11129.png" alt="Rostad tomatsoppa med vitlöksbröd" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11129 Rostad tomatsoppa med vitlöksbröd</h3>
+                    <p>En värmande rostad tomatsoppa serverad med knaprigt vitlöksbröd. En perfekt höst- eller vinterrätt!</p>
+                    <a href="tomatsoppa.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11130.webp" alt="Potatis och purjolökssoppa" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11130 Potatis och purjolökssoppa</h3>
+                    <p>En klassisk potatis- och purjolökssoppa som är både krämig och tröstande. Perfekt för kalla dagar!</p>
+                    <a href="potatissoppa.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11131.png" alt="Tacogratäng med syrlig salsa och nachos" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11131 Tacogratäng med syrlig salsa och nachos</h3>
+                    <p>En god tacogratäng med syrlig salsa, nachos och smakrika kryddor. Perfekt för en snabb middag!</p>
+                    <a href="tacogratan.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11132.png" alt="Gnocchi med krämig tomatsås och mozzarella" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11132 Gnocchi med krämig tomatsås och mozzarella</h3>
+                    <p>Krämig gnocchi med en fyllig tomatsås och smält mozzarella. En smakrik och mättande rätt!</p>
+                    <a href="gnocchi.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11133.png" alt="Enkel och krämig zucchini pasta" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11133 Enkel och krämig zucchini pasta</h3>
+                    <p>En snabb och krämig pastarätt med zucchini, vitlök och grädde. Lätt att göra men så gott!</p>
+                    <a href="zucchinipasta.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11134.png" alt="Italiensk pastasallad med soltorkade tomater" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11134 Italiensk pastasallad med soltorkade tomater</h3>
+                    <p>En färgglad och smakrik pastasallad med soltorkade tomater, oliver och färska örter. Perfekt för picknick eller som tillbehör.</p>
+                    <a href="pastasallad.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11135.png" alt="Kantarellpizza med lagrad ost" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11135 Kantarellpizza med lagrad ost</h3>
+                    <p>En lyxig pizza med kantareller och lagrad ost. En härlig smakupplevelse som passar perfekt till helgen!</p>
+                    <a href="kantarellpizza.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11136.png" alt="Mexikansk halloumiburgare med picklad lök, avokado och koriander" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11136 Mexikansk halloumiburgare med picklad lök, avokado och koriander</h3>
+                    <p>En smakrik och fräsch halloumiburgare med picklad lök, avokado och koriander. Perfekt för en snabb och god middag!</p>
+                    <a href="halloumiburgare.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11137.png" alt="Pasta bersaglieri - pasta med fyra sorters ostar" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11137 Pasta bersaglieri - pasta med fyra sorters ostar</h3>
+                    <p>En krämig och smakrik pastarätt med fyra sorters ostar. En riktig festmåltid för ostälskare!</p>
+                    <a href="pastabersaglieri.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11138.png" alt="Vegetarisk stroganoff" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11138 Vegetarisk stroganoff</h3>
+                    <p>En vegetariskt version av den klassiska stroganoffen med grönsaker och gräddig sås. En härlig och mättande rätt!</p>
+                    <a href="stroganoff.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11139.png" alt="Citronpasta med broccoli och krispig grönkål" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11139 Citronpasta med broccoli och krispig grönkål</h3>
+                    <p>Fräsch citronpasta med broccoli och krispig grönkål. En lätt och smakrik rätt som passar både till vardag och fest.</p>
+                    <a href="citronpasta.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11140.png" alt="Italiensk tomatsoppa med mozzarellafyllda quesadillas" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11140 Italiensk tomatsoppa med mozzarellafyllda quesadillas</h3>
+                    <p>En värmande tomatsoppa med krämiga mozzarellafyllda quesadillas. En perfekt kombination av smaker!</p>
+                    <a href="tomatsoppaquesadillas.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11141.png" alt="Krämig fänkålspasta" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11141 Krämig fänkålspasta</h3>
+                    <p>En krämig pastarätt med fänkål, vitlök och grädde. En smakrik och mjuk rätt som passar perfekt till middag.</p>
+                    <a href="fankalspasta.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11142.png" alt="Burrito bowl med tortillachips" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11142 Burrito bowl med tortillachips</h3>
+                    <p>En fräsch och smakrik burrito bowl med ris, bönor, grönsaker och krispiga tortillachips. En perfekt vardagsmiddag.</p>
+                    <a href="burritobowl.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11143.png" alt="Frasig halloumi med tzatziki och rostad potatis" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11143 Frasig halloumi med tzatziki och rostad potatis</h3>
+                    <p>Frasig halloumi serverad med krämig tzatziki och rostad potatis. En smakfull och mättande rätt.</p>
+                    <a href="halloumi.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11144.png" alt="Krämiga gochujang- och jordnötsnudlar" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11144 Krämiga gochujang- och jordnötsnudlar</h3>
+                    <p>Spicy och krämiga nudlar med gochujang och jordnötter. En asiatisk twist på en enkel pastarätt!</p>
+                    <a href="gochujangnudlar.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11145.png" alt="Krämig citronpasta med sparris" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11145 Krämig citronpasta med sparris</h3>
+                    <p>En fräsch och krämig citronpasta med sparris och grädde. En perfekt kombination av smak och lätthet.</p>
+                    <a href="citronpasta.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11146.png" alt="Auberginegratäng - Melanzane alla parmigiana" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11146 Auberginegratäng - Melanzane alla parmigiana</h3>
+                    <p>En italiensk klassiker med aubergine, tomatsås och massor av smält ost. En must-try rätt för alla vegetarianer!</p>
+                    <a href="auberginegratang.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11147.png" alt="Friterade vårrullar" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11147 Friterade vårrullar</h3>
+                    <p>Krispiga och gyllene friterade vårrullar med grönsaker och soyasås. En perfekt förrätt eller snack.</p>
+                    <a href="vårrullar.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11148.png" alt="Röd linsgryta med sval citronyoghurt" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11148 Röd linsgryta med sval citronyoghurt</h3>
+                    <p>En värmande och näringsrik linsgryta serverad med sval citronyoghurt. En enkel och hälsosam middag.</p>
+                    <a href="linsgryta.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11149.png" alt="Burrito med ost och svarta bönor" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11149 Burrito med ost och svarta bönor</h3>
+                    <p>En smakrik burrito fylld med ost, svarta bönor, ris och grönsaker. En snabb och mättande middag!</p>
+                    <a href="burrito.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11150.png" alt="Krämig avocadopasta" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11150 Krämig avocadopasta</h3>
+                    <p>En fräsch och krämig pasta med avokado, vitlök och citron. Perfekt för en lätt och hälsosam middag.</p>
+                    <a href="avocadopasta.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11151.png" alt="Chili sin carne" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11151 Chili sin carne</h3>
+                    <p>En smakrik och kryddig chili utan kött, med bönor och grönsaker. Perfekt för en värmande middag.</p>
+                    <a href="chilisincarne.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11152.png" alt="Kimchi fried rice med edamame" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11152 Kimchi fried rice med edamame</h3>
+                    <p>En asiatisk twist på stekt ris, med kimchi, edamame och en härlig kryddblandning. En snabb och smakrik middag.</p>
+                    <a href="kimchifriedrice.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11153.png" alt="Vit sparrissoppa" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11153 Vit sparrissoppa</h3>
+                    <p>En krämig och delikat vit sparrissoppa, perfekt som förrätt eller lätt middag under våren.</p>
+                    <a href="sparrissoppa.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11154.png" alt="Sommarsoppa" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11154 Sommarsoppa</h3>
+                    <p>En lätt och fräsch soppbaserad rätt med grönsaker, perfekt för varma sommardagar.</p>
+                    <a href="sommarsoppa.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11155.png" alt="Tortellini med ricotta och basilika i tomatsås" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11155 Tortellini med ricotta och basilika i tomatsås</h3>
+                    <p>Färska tortellini fyllda med ricotta och basilika, serverade i en härlig tomatsås. En smakrik och lätt rätt.</p>
+                    <a href="tortellini.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11156.png" alt="One Pot pasta med bönor och soltorkade tomater" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11156 One Pot pasta med bönor och soltorkade tomater</h3>
+                    <p>En enkel och smakrik one pot pasta med bönor och soltorkade tomater. Perfekt för en snabb middag!</p>
+                    <a href="onepotpasta.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11157.png" alt="Kantarellpaj" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11157 Kantarellpaj</h3>
+                    <p>En krämig och smakrik paj med kantareller. Perfekt till både lunch och middag.</p>
+                    <a href="kantarellpaj.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11158.png" alt="Morotssoppa" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11158 Morotssoppa</h3>
+                    <p>En värmande och nyttig morotssoppa, perfekt för kalla dagar.</p>
+                    <a href="morotssoppa.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11159.png" alt="Västerbottenpaj" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11159 Västerbottenpaj</h3>
+                    <p>En klassisk svensk paj med Västerbottensost. Perfekt till fest eller middag.</p>
+                    <a href="vasterbottenpaj.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11160.png" alt="Morotsbiffar" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11160 Morotsbiffar</h3>
+                    <p>Fräscha och smakrika morotsbiffar, perfekta till lunch eller middag tillsammans med en sallad.</p>
+                    <a href="morotsbiffar.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11161.png" alt="Kantarelltoast med picklad rödlök" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11161 Kantarelltoast med picklad rödlök</h3>
+                    <p>En lyxig toast med kantareller och picklad rödlök. Perfekt som förrätt eller snack.</p>
+                    <a href="kantarelltoast.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="11162.png" alt="Broccolipaj med purjolök" class="recipe-img">
+                <div class="recipe-info">
+                    <h3>11162 Broccolipaj med purjolök</h3>
+                    <p>En smakrik broccolipaj med purjolök. Perfekt till lunch eller som en del av en buffé.</p>
+                    <a href="broccolipaj.html" class="recipe-link">Läs mer ➔</a>
+                </div>
+            </div>
+        </section>
+           
+            <!-- Fler recept kan läggas till här -->
+        </section>
+    </main>
+
+    <script>
+        function searchRecipes() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let recipeCards = document.querySelectorAll(".recipe-card");
+
+            recipeCards.forEach(function(card) {
+                let title = card.querySelector("h3").textContent.toLowerCase();
+                if (title.includes(input)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+ <!-- Shopping cart icon placed next to the navigation menu -->
+ <div class="cart">
+    <a href="kundvagn.html">
+        <!-- SVG icon for the shopping cart -->
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M4 4a1 1 0 0 1 1-1h1.5a1 1 0 0 1 .979.796L7.939 6H19a1 1 0 0 1 .979 1.204l-1.25 6a1 1 0 0 1-.979.796H9.605l.208 1H17a3 3 0 1 1-2.83 2h-2.34a3 3 0 1 1-4.009-1.76L5.686 5H5a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+        </svg>
+        <!-- Cart item count -->
+        <span class="cart-count">0</span>
+    </a>
+</div>
+</nav>
+</header>
+
+<script>
+    // Function to update the cart count
+    function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+        const cartCount = document.querySelector('.cart-count');
+        cartCount.textContent = totalItems;  // Update the cart count display
+    }
+
+    // Adding items to the cart using localStorage
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const productName = this.dataset.product;
+            const productPrice = parseFloat(this.dataset.price);
+
+            // Get the current cart from localStorage
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Check if the product is already in the cart
+            const existingProduct = cart.find(item => item.name === productName);
+
+            if (existingProduct) {
+                // Increase the quantity if the product is already in the cart
+                existingProduct.quantity++;
+            } else {
+                // Add the product to the cart
+                cart.push({ name: productName, price: productPrice, quantity: 1 });
+            }
+
+            // Save the updated cart back to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Alert the user that the product was added
+            alert(`${productName} har lagts till i kundvagnen.`);
+
+            // Update the cart count in the cart icon
+            updateCartCount();
+        });
+    });
+
+    // Smooth scroll to products section
+    document.querySelector('.cta-button').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('produkter').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+
+    // Update the cart count when the page loads
+    window.addEventListener('load', updateCartCount);
+</script>
+</body>
+</html>

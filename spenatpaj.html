@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paj med spenat, feta och soltorkade tomater</title>
+    <link rel="stylesheet" href="ingredienser-instruktioner.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="kortlek orange.JPG" alt="Matleken Logotyp">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HEMMET</a></li>
+                <li><a href="recept.html">RECEPT</a></li>
+                <li><a href="#koden">KODEN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="recipe-card">
+        <h3>Paj med spenat, feta och soltorkade tomater</h3>
+        <img src="11126.png" alt="Paj med spenat, feta och soltorkade tomater" class="recipe-img">
+    </div>
+
+    <!-- Ingredienser Section -->
+    <section class="recipes">
+        <h2>🍴 Ingredienser (4–6 portioner):</h2>
+        <div class="recipe-card">
+            <h3>Pajdeg</h3>
+            <p>Vetemjöl – 3 dl</p>
+            <p>Smör eller margarin – 125 g, kallt och tärnat</p>
+            <p>Kallt vatten – 2–3 msk</p>
+        </div>
+        <div class="recipe-card">
+            <h3>Fyllning</h3>
+            <p>Färsk spenat – 200 g (eller 150 g fryst och tinad, väl avrunnen)</p>
+            <p>Fetaost – 150 g, smulad</p>
+            <p>Soltorkade tomater – 10 st, strimlade</p>
+            <p>Lök – 1 st, finhackad</p>
+            <p>Vitlök – 1 klyfta, finhackad</p>
+            <p>Ägg – 3 st</p>
+            <p>Mjölk – 2 dl</p>
+            <p>Grädde – 1 dl (kan ersättas med extra mjölk för en lättare variant)</p>
+            <p>Salt och peppar – efter smak</p>
+            <p>Olivolja – 1 msk</p>
+        </div>
+    </section>
+
+    <!-- Instruktioner Section -->
+    <section class="recipes">
+        <h2>👨‍🍳 Instruktioner:</h2>
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="step1"> Steg 1</h3>
+            <label for="step1">
+                <p><strong>Förbered pajdegen:</strong> Blanda vetemjöl och smör i en skål eller matberedare. Arbeta ihop tills det blir en smulig massa. Tillsätt vatten, lite i taget, och arbeta snabbt ihop till en smidig deg. Plasta in degen och låt vila i kylen i minst 30 minuter.</p>
+            </label>
+        </div>
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="step2"> Steg 2</h3>
+            <label for="step2">
+                <p><strong>Förbered fyllningen:</strong> Hetta upp olivolja i en stekpanna. Fräs lök och vitlök tills de mjuknar. Tillsätt spenaten och låt den snabbt sjunka ihop (om du använder färsk). Låt svalna något.</p>
+            </label>
+        </div>
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="step3"> Steg 3</h3>
+            <label for="step3">
+                <p><strong>Förgrädda pajskalet:</strong> Kavla ut degen på en mjölad yta och klä en pajform (ca 24 cm i diameter). Nagga botten med en gaffel. Förgrädda skalet i 200°C i ca 10 minuter.</p>
+            </label>
+        </div>
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="step4"> Steg 4</h3>
+            <label for="step4">
+                <p><strong>Montera pajen:</strong> Fördela spenatblandningen i det förgräddade pajskalet. Strö över smulad fetaost och soltorkade tomater. Vispa ihop ägg, mjölk och grädde. Krydda med salt och peppar. Häll äggstanningen över fyllningen.</p>
+            </label>
+        </div>
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="step5"> Steg 5</h3>
+            <label for="step5">
+                <p><strong>Grädda pajen:</strong> Grädda i mitten av ugnen på 200°C i ca 25–30 minuter, eller tills äggstanningen stelnat och pajen fått fin färg.</p>
+            </label>
+        </div>
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="step6"> Steg 6</h3>
+            <label for="step6">
+                <p><strong>Servera:</strong> Servera pajen varm eller ljummen med en fräsch sallad vid sidan av.</p>
+            </label>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="tips">
+        <h3><span class="circle-icon">💡</span> Tips:</h3>
+        <p>Du kan lägga till hackade valnötter för extra crunch eller byta ut fetaosten mot getost för en annan smakprofil!</p>
+    </section>
+</body>
+</html>
+
+
+
+    
+                  <!-- Timer -->
+                  <section class="timer-wrapper">
+                    <h2><span class="circle-icon">⏰</span> Timer:</h2>
+                    <div>
+                        <label for="set-time">Ställ in tid (i minuter):</label>
+                        <input type="number" id="set-time" min="1" value="30"> minuter
+                    </div>
+                    <div id="timer">30:00</div>
+                    <button onclick="startTimer()">Starta timer</button>
+                    <button onclick="stopTimer()">Stoppa timer</button>
+                    <button onclick="resetTimer()">Återställ timer</button>
+                </section>
+    
+                <!-- Back Link -->
+                <div class="back-link">
+                    <a href="recept.html" class="back-button">Tillbaka till receptlistan</a>
+                </div>
+            </section>
+        </main>
+    
+        <footer>
+            <p>&copy; 2024 Matleken UF - Alla rättigheter reserverade.</p>
+        </footer>
+    
+        <script>
+            let timer;
+            let isRunning = false;
+            let seconds = 0;
+            let minutes = 30;  // Standardvärde för minuter, kan ändras av användaren
+        
+            // Starta timern
+            function startTimer() {
+                if (isRunning) return; // Om timern redan är igång, gör ingenting
+                isRunning = true;
+        
+                // Hämta användarens inmatade tid från inputfältet
+                let inputTime = document.getElementById("set-time").value;
+                minutes = parseInt(inputTime);  // Sätt minuter till användarens input
+                seconds = 0;  // Återställ sekunderna till 0 när vi startar om timern
+        
+                // Uppdatera timer på sidan när användaren ställer in tiden
+                document.getElementById("timer").innerText = formatTime(minutes, seconds);
+        
+                timer = setInterval(function() {
+                    if (seconds === 0 && minutes === 0) {
+                        clearInterval(timer);  // Stoppar timern när den når 00:00
+                        alert("Tiden är slut!");
+                        isRunning = false;  // Ändra isRunning till false när tiden är slut
+                        return;
+                    }
+        
+                    // Minska sekunderna
+                    if (seconds === 0) {
+                        if (minutes > 0) {
+                            minutes--;
+                            seconds = 59;
+                        }
+                    } else {
+                        seconds--;
+                    }
+        
+                    // Uppdatera timer på sidan
+                    document.getElementById("timer").innerText = formatTime(minutes, seconds);
+                }, 1000);
+            }
+        
+            // Stoppa timern
+            function stopTimer() {
+                clearInterval(timer);  // Stoppar timern
+                isRunning = false;
+            }
+        
+            // Återställ timern
+            function resetTimer() {
+                clearInterval(timer);  // Stoppar den aktuella timern
+                isRunning = false;
+                seconds = 0;
+        
+                // Hämta användarens valda starttid från inputfältet
+                let inputTime = document.getElementById("set-time").value;
+                minutes = parseInt(inputTime);  // Uppdatera minuter till det angivna värdet
+        
+                // Uppdatera timer-texten för att matcha starttiden
+                document.getElementById("timer").innerText = formatTime(minutes, seconds);
+            }
+        
+            // Format för att visa tiden på formatet MM:SS
+            function formatTime(minutes, seconds) {
+                return (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+            }
+        </script>
+    
+    </body>
+    </html>
+    

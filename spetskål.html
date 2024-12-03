@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitlöksrostad spetskål med örtig smörsås och hasselnötter - Matleken</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="kortlek orange.JPG" alt="Matleken Logotyp">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HEMMET</a></li>
+                <li><a href="recept.html">RECEPT</a></li>
+                <li><a href="#koden">KODEN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="recipe-detail">
+            <!-- Recipe Title and Image -->
+            <div class="recipe-header">
+                <img src="11128.png" alt="Vitlöksrostad spetskål med örtig smörsås och hasselnötter" class="recipe-img">
+                <h1>Vitlöksrostad spetskål med örtig smörsås och hasselnötter</h1>
+            </div>
+
+            <!-- Ingredients -->
+            <section class="ingredients">
+                <h2><span class="circle-icon">🍴</span> Ingredienser (4 portioner):</h2>
+                <ul>
+                    <li><span class="circle-icon">🔹</span> Spetskål – 2 små eller 1 stor, halverad eller kvartad</li>
+                    <li><span class="circle-icon">🔹</span> Olivolja – 2 msk</li>
+                    <li><span class="circle-icon">🔹</span> Vitlök – 2 klyftor, pressade</li>
+                    <li><span class="circle-icon">🔹</span> Salt och svartpeppar – efter smak</li>
+                    <li><span class="circle-icon">🔹</span> Smör – 100 g (till smörsåsen)</li>
+                    <li><span class="circle-icon">🔹</span> Färska örter – 1 dl finhackade (t.ex. persilja, gräslök och dill)</li>
+                    <li><span class="circle-icon">🔹</span> Vitlök – 1 klyfta, finhackad (till smörsåsen)</li>
+                    <li><span class="circle-icon">🔹</span> Citronjuice – 1 msk</li>
+                    <li><span class="circle-icon">🔹</span> Salt och peppar – efter smak (till smörsåsen)</li>
+                    <li><span class="circle-icon">🔹</span> Hasselnötter – 50 g, rostade och grovhackade (topping)</li>
+                    <li><span class="circle-icon">🔹</span> Färska örter – till garnering</li>
+                </ul>
+            </section>
+
+            <!-- Instructions -->
+            <section class="instructions">
+                <h2><span class="circle-icon">👨‍🍳</span> Instruktioner:</h2>
+                <ol>
+                    <li><input type="checkbox" id="step1"><label for="step1"> Förbered spetskålen: Sätt ugnen på 200°C. Lägg spetskålen på en plåt klädd med bakplåtspapper. Pensla generöst med olivolja och strö över pressad vitlök, salt och peppar.</label></li>
+                    <li><input type="checkbox" id="step2"><label for="step2"> Rosta spetskålen: Rosta i ugnen i ca 20–25 minuter, eller tills spetskålen är gyllene och mjuk med lätt krispiga kanter.</label></li>
+                    <li><input type="checkbox" id="step3"><label for="step3"> Gör den örtiga smörsåsen: Smält smöret i en kastrull på låg värme. Tillsätt finhackad vitlök och låt den sjuda utan att bli brynt. Rör ner citronjuice och de finhackade örterna. Smaka av med salt och peppar.</label></li>
+                    <li><input type="checkbox" id="step4"><label for="step4"> Rosta hasselnötter: Hetta upp en torr stekpanna och rosta hasselnötterna tills de börjar dofta och få en gyllene färg. Låt svalna och grovhacka dem.</label></li>
+                    <li><input type="checkbox" id="step5"><label for="step5"> Montera rätten: Lägg den rostade spetskålen på ett serveringsfat. Ringla den örtiga smörsåsen över kålen.</label></li>
+                    <li><input type="checkbox" id="step6"><label for="step6"> Topping: Toppa med de rostade hasselnötterna och garnera med extra färska örter.</label></li>
+                    <li><input type="checkbox" id="step7"><label for="step7"> Servera: Servera rätten som en elegant förrätt, tillbehör eller lätt huvudrätt tillsammans med ett gott bröd eller en fräsch sallad.</label></li>
+                </ol>
+            </section>
+
+            <!-- Timer Wrapper -->
+            <section class="timer-wrapper">
+                <h2><span class="circle-icon">⏰</span> Timer:</h2>
+                <div>
+                    <label for="set-time">Ställ in tid (i minuter):</label>
+                    <input type="number" id="set-time" min="1" value="30"> minuter
+                </div>
+                <div id="timer">30:00</div>
+                <button onclick="startTimer()">Starta timer</button>
+                <button onclick="stopTimer()">Stoppa timer</button>
+                <button onclick="resetTimer()">Återställ timer</button>
+            </section>
+
+            <!-- Back Link -->
+            <div class="back-link">
+                <a href="recept.html" class="back-button">Tillbaka till receptlistan</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Matleken UF - Alla rättigheter reserverade.</p>
+    </footer>
+</body>
+</html>
+
+<script>
+    let timer;
+    let isRunning = false;
+    let seconds = 0;
+    let minutes = 30;  // Standardvärde för minuter, kan ändras av användaren
+
+    // Starta timern
+    function startTimer() {
+        if (isRunning) return; // Om timern redan är igång, gör ingenting
+        isRunning = true;
+
+        // Hämta användarens inmatade tid från inputfältet
+        let inputTime = document.getElementById("set-time").value;
+        minutes = parseInt(inputTime);  // Sätt minuter till användarens input
+        seconds = 0;  // Återställ sekunderna till 0 när vi startar om timern
+
+        // Uppdatera timer på sidan när användaren ställer in tiden
+        document.getElementById("timer").innerText = formatTime(minutes, seconds);
+
+        timer = setInterval(function() {
+            if (seconds === 0 && minutes === 0) {
+                clearInterval(timer);  // Stoppar timern när den når 00:00
+                alert("Tiden är slut!");
+                isRunning = false;  // Ändra isRunning till false när tiden är slut
+                return;
+            }
+
+            // Minska sekunderna
+            if (seconds === 0) {
+                if (minutes > 0) {
+                    minutes--;
+                    seconds = 59;
+                }
+            } else {
+                seconds--;
+            }
+
+            // Uppdatera timer på sidan
+            document.getElementById("timer").innerText = formatTime(minutes, seconds);
+        }, 1000);
+    }
+
+    // Stoppa timern
+    function stopTimer() {
+        clearInterval(timer);  // Stoppar timern
+        isRunning = false;
+    }
+
+    // Återställ timern
+    function resetTimer() {
+        clearInterval(timer);  // Stoppar den aktuella timern
+        isRunning = false;
+        seconds = 0;
+
+        // Hämta användarens valda starttid från inputfältet
+        let inputTime = document.getElementById("set-time").value;
+        minutes = parseInt(inputTime);  // Uppdatera minuter till det angivna värdet
+
+        // Uppdatera timer-texten för att matcha starttiden
+        document.getElementById("timer").innerText = formatTime(minutes, seconds);
+    }
+
+    // Format för att visa tiden på formatet MM:SS
+    function formatTime(minutes, seconds) {
+        return (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+    }
+</script>
+
+</body>
+</html>

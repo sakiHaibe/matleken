@@ -1,0 +1,344 @@
+/* =========================
+   INDEX.HTML - GENERAL STYLING
+   ========================= */
+   
+/* General Settings */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fbb478;
+    color: #333333;
+}
+
+/* Header Styling for index.html */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fbb478;
+    position: relative;
+}
+
+header .logo {
+    position: absolute;
+    left: 2rem;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3b11b2;
+}
+
+/* Hero Section Styling for index.html */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #fbb478;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: #454545;
+}
+
+/* CTA Button Styling for index.html */
+.cta-button {
+    display: inline-block;
+    background-color: #0056ff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #0040cc;
+}
+
+/* Product Section Styling for index.html */
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 2rem 0;
+}
+
+.product {
+    background-color: #fff;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product h3 {
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+.product-arrow {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #6c63ff;
+    font-weight: bold;
+}
+
+/* Footer Styling for index.html */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}
+
+/* =========================
+   RECEPT.HTML - RECIPE PAGE STYLING
+   ========================= */
+
+/* Search Filter Styling for recept.html */
+.search {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.search input {
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Recipe Section Styling for recept.html */
+.recipes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 2rem;
+}
+
+.recipe-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Recipe Detail Page Styling for recept.html */
+.recipe-detail {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.recipe-img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.recipe-header h1 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: #333;
+}
+
+/* Ingredients Section Styling for recept.html */
+.ingredients ul {
+    margin-left: 2rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.ingredients h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.ingredients li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+/* Instructions Section Styling for recept.html */
+.instructions ol {
+    margin-left: 2rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.instructions h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.instructions li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Circle Icon Styling for recept.html */
+.circle-icon {
+    background-color: #fbb478;
+    color: #0b0b0b;
+    border-radius: 50%;
+    padding: 0.3rem;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+/* Back Button Styling for recept.html */
+.back-link {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.back-button {
+    text-decoration: none;
+    background-color: #0056ff;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background-color: #ffffff;
+}
+
+/* =========================
+   KUNDVAGN.HTML - SHOPPING CART PAGE STYLING
+   ========================= */
+
+/* Cart Icon in Header for kundvagn.html */
+.cart {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.cart img {
+    width: 30px;
+    height: 30px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+/* Cart Main Section for kundvagn.html */
+.item-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.item-info p {
+    font-size: 16px;
+    color: #666;
+}
+
+.item-quantity input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+}
+
+.item-total .item-price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Cart Summary Section for kundvagn.html */
+.cart-summary {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.summary-value {
+    font-size: 18px;
+    color: #FF0000;
+}
+
+/* Checkout Button Styling for kundvagn.html */
+.checkout-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #0056b3;
+}
+

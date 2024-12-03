@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Chilinudlar med Cashewnötter - Matleken</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="kortlek orange.JPG" alt="Matleken Logotyp">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HEMMET</a></li>
+                <li><a href="recept.html">RECEPT</a></li>
+                <li><a href="#koden">KODEN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="recipe-detail">
+            <!-- Recipe Title and Image -->
+            <div class="recipe-header">
+                <img src="11124.png" alt="Sweet Chilinudlar med Cashewnötter" class="recipe-img">
+                <h1>Sweet Chilinudlar med Cashewnötter</h1>
+            </div>
+
+            <!-- Ingredients -->
+            <section class="ingredients">
+                <h2><span class="circle-icon">🍴</span> Ingredienser:</h2>
+                <ul>
+                    <li><span class="circle-icon">🔹</span> För nudlar och grönsaker:
+                        <ul>
+                            <li><span class="circle-icon">🔸</span> 300 g Äggnudlar eller risnudlar</li>
+                            <li><span class="circle-icon">🔸</span> 1 st Paprika, tunt strimlad (gärna röd eller gul)</li>
+                            <li><span class="circle-icon">🔸</span> 1 st Morot, julienneskuren eller tunt skivad</li>
+                            <li><span class="circle-icon">🔸</span> 200 g Broccoli, små buketter</li>
+                            <li><span class="circle-icon">🔸</span> 1 liten Röd lök, tunt skivad</li>
+                            <li><span class="circle-icon">🔸</span> 1 dl Cashewnötter, rostade</li>
+                            <li><span class="circle-icon">🔸</span> Handfull Färsk koriander, hackad (valfritt)</li>
+                            <li><span class="circle-icon">🔸</span> 1 msk Sesamfrön, för garnering</li>
+                        </ul>
+                    </li>
+                    <li><span class="circle-icon">🔹</span> För sweet chilidressingen:
+                        <ul>
+                            <li><span class="circle-icon">🔸</span> 4 msk Sweet chilisås</li>
+                            <li><span class="circle-icon">🔸</span> 3 msk Sojasås</li>
+                            <li><span class="circle-icon">🔸</span> Saften från 1 Lime</li>
+                            <li><span class="circle-icon">🔸</span> 1 msk Sesamolja</li>
+                            <li><span class="circle-icon">🔸</span> 1 tsk Riven ingefära</li>
+                            <li><span class="circle-icon">🔸</span> 2 vitlöksklyftor, pressade</li>
+                            <li><span class="circle-icon">🔸</span> Chiliflakes, efter smak (valfritt)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Instructions -->
+            <section class="instructions">
+                <h2><span class="circle-icon">👨‍🍳</span> Instruktioner:</h2>
+                <ol>
+                    <li><input type="checkbox" id="step1"><label for="step1"> Koka nudlarna: Koka nudlarna enligt förpackningens anvisningar. Skölj dem i kallt vatten och låt rinna av. Ställ åt sidan.</label></li>
+                    <li><input type="checkbox" id="step2"><label for="step2"> Förbered grönsakerna: Hetta upp lite sesamolja i en stor stekpanna eller wok. Stek broccoli, paprika, morot och röd lök på medelhög värme i 4–5 minuter tills de är mjuka men fortfarande har lite tuggmotstånd.</label></li>
+                    <li><input type="checkbox" id="step3"><label for="step3"> Blanda dressingen: I en skål, vispa ihop sweet chilisås, sojasås, limejuice, sesamolja, riven ingefära, vitlök och eventuellt chiliflakes.</label></li>
+                    <li><input type="checkbox" id="step4"><label for="step4"> Kombinera nudlar och grönsaker: Tillsätt nudlarna i stekpannan med grönsakerna och häll över dressingen. Rör om ordentligt så att nudlarna täcks av såsen. Värm i 2–3 minuter tills allt är genomvarmt.</label></li>
+                    <li><input type="checkbox" id="step5"><label for="step5"> Tillsätt cashewnötter: Strö över rostade cashewnötter och blanda in dem precis innan servering.</label></li>
+                    <li><input type="checkbox" id="step6"><label for="step6"> Servera: Lägg upp nudlarna i skålar. Garnera med färsk koriander och sesamfrön. Servera med limeklyftor vid sidan för extra syrlighet.</label></li>
+                </ol>
+            </section>
+
+            <!-- Tips Section -->
+            <section class="tips">
+                <h3><span class="circle-icon">💡</span> Tips:</h3>
+                <p>För extra protein, lägg till tofu, kyckling eller räkor. Rätten kan enkelt göras vegansk genom att använda veganska nudlar och kontrollera att sojasåsen är vegansk.</p>
+            </section>
+
+            <!-- Timer -->
+            <section class="timer-wrapper">
+                <h2><span class="circle-icon">⏰</span> Timer:</h2>
+                <div>
+                    <label for="set-time">Ställ in tid (i minuter):</label>
+                    <input type="number" id="set-time" min="1" value="30"> minuter
+                </div>
+                <div id="timer">30:00</div>
+                <button onclick="startTimer()">Starta timer</button>
+                <button onclick="stopTimer()">Stoppa timer</button>
+                <button onclick="resetTimer()">Återställ timer</button>
+            </section>
+
+            <!-- Back Link -->
+            <div class="back-link">
+                <a href="recept.html" class="back-button">Tillbaka till receptlistan</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Matleken UF - Alla rättigheter reserverade.</p>
+    </footer>
+
+    <script>
+        let timer;
+        let isRunning = false;
+        let seconds = 0;
+        let minutes = 30;  // Standardvärde för minuter, kan ändras av användaren
+    
+        // Starta timern
+        function startTimer() {
+            if (isRunning) return; // Om timern redan är igång, gör ingenting
+            isRunning = true;
+    
+            // Hämta användarens inmatade tid från inputfältet
+            let inputTime = document.getElementById("set-time").value;
+            minutes = parseInt(inputTime);  // Sätt minuter till användarens input
+            seconds = 0;  // Återställ sekunderna till 0 när vi startar om timern
+    
+            // Uppdatera timer på sidan när användaren ställer in tiden
+            document.getElementById("timer").innerText = formatTime(minutes, seconds);
+    
+            timer = setInterval(function() {
+                if (seconds === 0 && minutes === 0) {
+                    clearInterval(timer);  // Stoppar timern när den når 00:00
+                    alert("Tiden är slut!");
+                    isRunning = false;  // Ändra isRunning till false när tiden är slut
+                    return;
+                }
+    
+                // Minska sekunderna
+                if (seconds === 0) {
+                    if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                    }
+                } else {
+                    seconds--;
+                }
+    
+                // Uppdatera timer på sidan
+                document.getElementById("timer").innerText = formatTime(minutes, seconds);
+            }, 1000);
+        }
+    
+        // Stoppa timern
+        function stopTimer() {
+            clearInterval(timer);  // Stoppar timern
+            isRunning = false;
+        }
+    
+        // Återställ timern
+        function resetTimer() {
+            clearInterval(timer);  // Stoppar den aktuella timern
+            isRunning = false;
+            seconds = 0;
+    
+            // Hämta användarens valda starttid från inputfältet
+            let inputTime = document.getElementById("set-time").value;
+            minutes = parseInt(inputTime);  // Uppdatera minuter till det angivna värdet
+    
+            // Uppdatera timer-texten för att matcha starttiden
+            document.getElementById("timer").innerText = formatTime(minutes, seconds);
+        }
+    
+        // Format för att visa tiden på formatet MM:SS
+        function formatTime(minutes, seconds) {
+            return (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+        }
+    </script>
+
+</body>
+</html>

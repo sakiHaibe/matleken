@@ -1,8 +1,8 @@
 /* =========================
-   INDEX.HTML - GENERAL STYLING
+   INDEX.CSS - GENERAL STYLING
    ========================= */
-   
-/* General Settings */
+
+/* Allmänna inställningar */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,7 +11,54 @@ body {
     color: #333333;
 }
 
-/* Header Styling for index.html */
+/* Bakgrund med kortlek */
+.background-container {
+    background-image: url('kortlek-bakgrund.jpg'); /* Byt ut med din kortleksbild */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full höjd */
+    position: relative;
+}
+
+/* Textinnehåll ovanpå bakgrunden */
+.hero-content {
+    text-align: center;
+    color: white;
+    padding: 4rem 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.5); /* För att göra texten mer läsbar */
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #0056ff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #0040cc;
+}
+
+/* Header Styling */
 header {
     display: flex;
     justify-content: center;
@@ -44,42 +91,7 @@ header nav ul li a {
     color: #3b11b2;
 }
 
-/* Hero Section Styling for index.html */
-.hero {
-    text-align: center;
-    padding: 3rem 1rem;
-    background-color: #fbb478;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    color: #ffffff;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 2rem;
-    color: #454545;
-}
-
-/* CTA Button Styling for index.html */
-.cta-button {
-    display: inline-block;
-    background-color: #0056ff;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.cta-button:hover {
-    background-color: #0040cc;
-}
-
-/* Product Section Styling for index.html */
+/* Produktsektion */
 .products {
     display: flex;
     justify-content: center;
@@ -106,31 +118,11 @@ header nav ul li a {
     margin: 1rem 0;
 }
 
-.product-arrow {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: #6c63ff;
-    font-weight: bold;
-}
-
-/* Footer Styling for index.html */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #ffffff;
-    border-top: 1px solid #ddd;
-    margin-top: 40px;
-}
-/* Cart Icon in Header for kundvagn.html */
+/* För att bibehålla funktionaliteten för kundvagnen */
 .cart {
     position: absolute;
     top: 20px;
     right: 20px;
-}
-
-.cart img {
-    width: 30px;
-    height: 30px;
 }
 
 .cart-count {
@@ -144,7 +136,7 @@ footer {
     border-radius: 50%;
 }
 
-/* Cart Main Section for kundvagn.html */
+/* Cart Main Section för kundvagn.html */
 .item-info h3 {
     font-size: 18px;
     margin-bottom: 5px;
@@ -166,7 +158,7 @@ footer {
     font-weight: bold;
 }
 
-/* Cart Summary Section for kundvagn.html */
+/* Cart Summary Section för kundvagn.html */
 .cart-summary {
     margin-top: 30px;
     padding: 20px;
@@ -190,7 +182,7 @@ footer {
     color: #FF0000;
 }
 
-/* Checkout Button Styling for kundvagn.html */
+/* Checkout Button Styling */
 .checkout-btn {
     width: 100%;
     padding: 15px;
@@ -207,3 +199,40 @@ footer {
     background-color: #0056b3;
 }
 
+/* Produkter vid hover */
+.product:hover {
+    transform: translateY(-10px); /* Moves the product upwards when hovered */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Lägg till skugga för flytande effekt */
+}
+
+.product img {
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+/* För att skala bilden vid hover */
+.product:hover img {
+    transform: scale(1.05); /* Liten zoom-effekt när produkten är över */
+}
+
+/* CTA knapp vid hover */
+.cta-button:hover {
+    background-color: #0040cc;
+}
+
+/* Shoppingcart icon */
+.cart svg {
+    width: 30px;
+    height: 30px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 50%;
+}

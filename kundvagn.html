@@ -44,27 +44,6 @@
     </footer>
 
     <script>
-        // Example products added to simulate cart contents
-        const exampleProducts = [
-            {
-                name: "Vegetariskt",
-                price: 120,
-                quantity: 1,
-                image: "vegetariskt.jpg" // Make sure the path is correct
-            },
-            {
-                name: "Asiatiskt",
-                price: 120,
-                quantity: 1,
-                image: "asiatiskt.jpg" // Make sure the path is correct
-            }
-        ];
-
-        // Store example products in localStorage (for testing purposes)
-        if (!localStorage.getItem('cart')) {
-            localStorage.setItem('cart', JSON.stringify(exampleProducts));
-        }
-
         // Function to load the cart from localStorage
         function loadCart() {
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -74,15 +53,16 @@
             cartItemsContainer.innerHTML = ''; // Clear the cart before loading
 
             // Loop through each cart item and display it
-            cart.forEach(item => {
+            cart.forEach((item, index) => {
                 const itemTotal = item.price * item.quantity;
                 totalPrice += itemTotal;
 
                 // Create item element
                 const itemElement = document.createElement('div');
                 itemElement.classList.add('cart-item');
+                itemElement.dataset.index = index; // Store index in the item
 
-                // Add product details including image
+                // Add product details including image and remove button
                 itemElement.innerHTML = `
                     <div class="item-image">
                         <img src="${item.image}" alt="${item.name}" class="product-image"/>
@@ -98,8 +78,10 @@
                     <div class="item-total">
                         <span class="item-price">${itemTotal} kr</span>
                     </div>
+                    <button class="remove-item-btn">×</button>
                 `;
 
+                // Append the item element to the cart container
                 cartItemsContainer.appendChild(itemElement);
             });
 
@@ -126,6 +108,23 @@
                 localStorage.setItem('cart', JSON.stringify(cart));
 
                 // Reload the cart to update totals
+                loadCart();
+            }
+        });
+
+        // Remove item from cart
+        document.addEventListener('click', function(event) {
+            if (event.target.classList.contains('remove-item-btn')) {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const itemIndex = event.target.parentElement.dataset.index;
+
+                // Remove the item from the cart array
+                cart.splice(itemIndex, 1);
+
+                // Save the updated cart to localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                // Reload the cart to update the display
                 loadCart();
             }
         });

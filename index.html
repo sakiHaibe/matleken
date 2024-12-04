@@ -6,112 +6,47 @@
     <title>Matleken</title>
     <link rel="stylesheet" href="index.css">
     <style>
-        /* Allmänna inställningar */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fbb478;
-            color: #333333;
-        }
-
-        /* Bakgrund med kortlek */
-        .background-container {
-            background-image: url('kortlek-bakgrund.jpg'); /* Byt till din kortleksbild */
-            background-size: cover;
-            background-position: center;
-            height: 100vh; /* Full höjd */
-            position: relative;
-        }
-
-        /* Textinnehåll ovanpå bakgrunden */
-        .hero-content {
-            text-align: center;
-            color: white;
-            padding: 4rem 2rem;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-width: 800px;
-            background-color: rgba(0, 0, 0, 0.5); /* För att göra texten mer läsbar */
-            border-radius: 10px;
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: #0056ff;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .cta-button:hover {
-            background-color: #0040cc;
-        }
-
-        /* För att bibehålla designen för produkterna och cart */
-        .products {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 2rem 0;
-        }
-
+        /* Add smooth transition to product */
         .product {
-            background-color: #fff;
-            padding: 1rem;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            width: 200px;
+            position: relative;
+            margin: 20px;
+            padding: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+
+        .product:hover {
+            transform: translateY(-10px); /* Moves the product upwards when hovered */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for a floating effect */
+        }
+
 
         .product img {
             max-width: 100%;
-            border-radius: 5px;
+            transition: transform 0.3s ease;
         }
 
-        .product h3 {
-            font-size: 1rem;
-            margin: 1rem 0;
+
+        /* Change the product's image scale when hovered */
+        .product:hover img {
+            transform: scale(1.05); /* Slight zoom effect on hover */
         }
 
-        .product-arrow {
-            font-size: 1.5rem;
-            text-decoration: none;
-            color: #6c63ff;
-            font-weight: bold;
-        }
 
-        /* Cart Icon i Header */
-        .cart {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        .cart-count {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background-color: red;
+        .add-to-cart {
+            display: inline-block;
+            padding: 10px;
+            background-color: #007bff;
             color: white;
-            font-size: 12px;
-            padding: 2px 5px;
-            border-radius: 50%;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+
+        .add-to-cart:hover {
+            background-color: #0056b3; /* Darker blue when hovered */
         }
     </style>
 </head>
@@ -126,31 +61,33 @@
                 <li><a href="recept.html">RECEPT</a></li>
                 <li><a href="recept.html">KODEN</a></li>
             </ul>
+            <!-- Shopping cart icon placed next to the navigation menu -->
             <div class="cart">
                 <a href="kundvagn.html">
+                    <!-- SVG icon for the shopping cart -->
                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd" d="M4 4a1 1 0 0 1 1-1h1.5a1 1 0 0 1 .979.796L7.939 6H19a1 1 0 0 1 .979 1.204l-1.25 6a1 1 0 0 1-.979.796H9.605l.208 1H17a3 3 0 1 1-2.83 2h-2.34a3 3 0 1 1-4.009-1.76L5.686 5H5a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
                     </svg>
+                    <!-- Cart item count -->
                     <span class="cart-count">0</span>
                 </a>
             </div>
         </nav>
     </header>
 
-    <!-- Bakgrundssektion -->
-    <section class="background-container">
-        <div class="hero-content">
+
+    <main>
+        <section class="hero">
             <h1>Matleken</h1>
             <p>
-                Vi på Matleken UF har skapat en helt ny upplevelse för matälskare och nyfikna kockar. 
-                Vårt företag erbjuder en serie kortlekar, där varje kort ger dig tillgång till ett unikt recept. 
+                Vi på Matleken UF har skapat en helt ny upplevelse för matälskare och nyfikna kockar.
+                Vårt företag erbjuder en serie kortlekar, där varje kort ger dig tillgång till ett unikt recept.
                 Varje kort i våra temabaserade kortlekar har en aptitretande bild på en maträtt och en femsiffrig kod som du enkelt kan skriva in på vår webbplats.
             </p>
             <a href="#" class="cta-button">HANDLA NU</a>
-        </div>
-    </section>
+        </section>
 
-    <main>
+
         <section class="products" id="produkter">
             <div class="product">
                 <img src="vegatariskt.png" alt="Vegetariskt">
@@ -165,35 +102,59 @@
         </section>
     </main>
 
+
     <script>
-        // Funktioner för kundvagn och interaktion som du redan har
+        // Function to update the cart count
         function updateCartCount() {
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
             const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
             const cartCount = document.querySelector('.cart-count');
-            cartCount.textContent = totalItems;
+            cartCount.textContent = totalItems;  // Update the cart count display
         }
 
+
+        // Adding items to the cart using localStorage
         const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+
         addToCartButtons.forEach(button => {
             button.addEventListener('click', function() {
                 const productName = this.dataset.product;
                 const productPrice = parseFloat(this.dataset.price);
+
+
+                // Get the current cart from localStorage
                 let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+
+                // Check if the product is already in the cart
                 const existingProduct = cart.find(item => item.name === productName);
 
+
                 if (existingProduct) {
+                    // Increase the quantity if the product is already in the cart
                     existingProduct.quantity++;
                 } else {
+                    // Add the product to the cart
                     cart.push({ name: productName, price: productPrice, quantity: 1 });
                 }
 
+
+                // Save the updated cart back to localStorage
                 localStorage.setItem('cart', JSON.stringify(cart));
+
+
+                // Alert the user that the product was added
                 alert(`${productName} har lagts till i kundvagnen.`);
+
+
+                // Update the cart count in the cart icon
                 updateCartCount();
             });
         });
 
+
+        // Smooth scroll to products section
         document.querySelector('.cta-button').addEventListener('click', function(event) {
             event.preventDefault();
             document.getElementById('produkter').scrollIntoView({
@@ -201,6 +162,8 @@
             });
         });
 
+
+        // Update the cart count when the page loads
         window.addEventListener('load', updateCartCount);
     </script>
 </body>

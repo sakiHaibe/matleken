@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Larb - Thaisallad med kyckling och jordnötter</title>
+    <link rel="stylesheet" href="ingredienser-instruktioner.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="kortlek orange.JPG" alt="Matleken Logotyp">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HEMMET</a></li>
+                <li><a href="recept.html">RECEPT</a></li>
+                <li><a href="#koden">KODEN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="recipe-card">
+        <h3>Chicken Larb - Thaisallad med kyckling och jordnötter</h3>
+        <img src="33334.png" alt="Chicken Larb - Thaisallad med kyckling och jordnötter" class="recipe-img">
+    </div>
+
+    <!-- Ingredienser Section -->
+    <section class="recipes">
+        <h2>🍴 Ingredienser (4 portioner):</h2>
+        <div class="recipe-card">
+            <h3>Kycklingfärs och sås:</h3>
+            <p>300 g kycklingfärs</p>
+            <p>1 msk rapsolja till stekning</p>
+            <p>1 msk fisksås</p>
+            <p>1 msk limejuice (ca 1 lime)</p>
+            <p>1 msk ljus soja</p>
+            <p>1 tsk strösocker</p>
+            <p>1 röd chili, finhackad</p>
+            <p>2 salladslökar, tunt skivade</p>
+            <p>1 dl jordnötter, grovhackade</p>
+            <p>8 stora salladsblad (t.ex. romansallad eller isberg)</p>
+        </div>
+
+        <div class="recipe-card">
+            <h3>Till garnering:</h3>
+            <p>Färsk koriander och mynta</p>
+        </div>
+    </section>
+
+    <!-- Instruktioner Section -->
+    <section class="recipes">
+        <h2>👨‍🍳 Instruktioner:</h2>
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="sasStep"> Steg 1 - Förbered såsen</h3>
+            <label for="sasStep">
+                <p>I en liten skål, blanda fisksås, limejuice, soja och strösocker. Rör om tills sockret löser sig. Smaka av – balansen mellan salt, syrligt och sött ska vara jämn. Ställ åt sidan.</p>
+            </label>
+        </div>
+
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="stekKycklingStep"> Steg 2 - Stek kycklingfärsen</h3>
+            <label for="stekKycklingStep">
+                <p>Hetta upp oljan i en stor stekpanna på medelhög värme. Lägg i kycklingfärsen och bryn den under omrörning tills den är genomstekt och smulig, ca 5–7 minuter.</p>
+            </label>
+        </div>
+
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="tillsattSmakerStep"> Steg 3 - Tillsätt smaker</h3>
+            <label for="tillsattSmakerStep">
+                <p>Häll såsen över den stekta färsen och tillsätt chili och salladslök. Rör om och låt allt fräsa ihop i 2–3 minuter så att smakerna blandas väl.</p>
+            </label>
+        </div>
+
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="serveraStep"> Steg 4 - Servera</h3>
+            <label for="serveraStep">
+                <p>Lägg kycklingblandningen i salladsblad och toppa med hackade jordnötter, färsk koriander och mynta. Servera genast som förrätt eller lätt huvudrätt.</p>
+            </label>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="tips">
+        <h3><span class="circle-icon">💡</span> Tips:</h3>
+        <p>För extra crunch, tillsätt rostade risnudlar eller hackade cashewnötter. Du kan även justera mängden chili efter hur stark du vill ha rätten!</p>
+    </section>
+
+    <!-- Timer -->
+    <section class="timer-wrapper">
+        <h2><span class="circle-icon">⏰</span> Timer:</h2>
+        <div>
+            <label for="set-time">Ställ in tid (i minuter):</label>
+            <input type="number" id="set-time" min="1" value="30"> minuter
+        </div>
+        <div id="timer">30:00</div>
+        <button onclick="startTimer()">Starta timer</button>
+        <button onclick="stopTimer()">Stoppa timer</button>
+        <button onclick="resetTimer()">Återställ timer</button>
+    </section>
+
+    <!-- Back Link -->
+    <div class="back-link">
+        <a href="recept.html" class="back-button">Tillbaka till receptlistan</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Matleken UF - Alla rättigheter reserverade.</p>
+    </footer>
+
+    <script>
+        let timer;
+        let isRunning = false;
+        let seconds = 0;
+        let minutes = 30;  // Standardvärde för minuter, kan ändras av användaren
+    
+        // Starta timern
+        function startTimer() {
+            if (isRunning) return; // Om timern redan är igång, gör ingenting
+            isRunning = true;
+    
+            // Hämta användarens inmatade tid från inputfältet
+            let inputTime = document.getElementById("set-time").value;
+            minutes = parseInt(inputTime);  // Sätt minuter till användarens input
+            seconds = 0;  // Återställ sekunderna till 0 när vi startar om timern
+    
+            // Uppdatera timer på sidan när användaren ställer in tiden
+            document.getElementById("timer").innerText = formatTime(minutes, seconds);
+    
+            timer = setInterval(function() {
+                if (seconds === 0 && minutes === 0) {
+                    clearInterval(timer);  // Stoppar timern när den når 00:00
+                    alert("Tiden är slut!");
+                    isRunning = false;  // Ändra isRunning till false när tiden är slut
+                    return;
+                }
+    
+                // Minska sekunderna
+                if (seconds === 0) {
+                    if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                    }
+                } else {
+                    seconds--;
+                }
+    
+                // Uppdatera timer på sidan
+                document.getElementById("timer").innerText = formatTime(minutes, seconds);
+            }, 1000);
+        }
+    
+        // Stoppa timern
+        function stopTimer() {
+            clearInterval(timer);  // Stoppar timern
+            isRunning = false;
+        }
+    
+        // Återställ timern
+        function resetTimer() {
+            clearInterval(timer);  // Stoppar den aktuella timern
+            isRunning = false;
+            seconds = 0;
+    
+            // Hämta användarens valda starttid från inputfältet
+            let inputTime = document.getElementById("set-time").value;
+            minutes = parseInt(inputTime);  // Uppdatera minuter till det angivna värdet
+    
+            // Uppdatera timer-texten för att matcha starttiden
+            document.getElementById("timer").innerText = formatTime(minutes, seconds);
+        }
+    
+        // Format för att visa tiden på formatet MM:SS
+        function formatTime(minutes, seconds) {
+            return (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+        }
+    </script>
+
+</body>
+</html>

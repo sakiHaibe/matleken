@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broccolipaj med purjolök</title>
+    <link rel="stylesheet" href="ingredienser-instruktioner.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="kortlek orange.JPG" alt="Matleken Logotyp">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HEMMET</a></li>
+                <li><a href="recept.html">RECEPT</a></li>
+                <li><a href="#koden">KODEN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="recipe-card">
+        <h3>Broccolipaj med purjolök</h3>
+        <img src="11162.png" alt="Broccolipaj med purjolök" class="recipe-img">
+    </div>
+
+    <!-- Ingredienser Section -->
+    <section class="recipes">
+        <h2>🍴 Ingredienser (4 portioner):</h2>
+        <div class="recipe-card">
+            <h3>Pajdeg:</h3>
+            <p>3 dl vetemjöl</p>
+            <p>125 g smör, kallt och tärnat</p>
+            <p>2 msk kallt vatten</p>
+        </div>
+
+        <div class="recipe-card">
+            <h3>Fyllning:</h3>
+            <p>300 g broccoli, i små buketter</p>
+            <p>1 purjolök, skivad</p>
+            <p>3 ägg</p>
+            <p>2 dl grädde</p>
+            <p>1 dl mjölk</p>
+            <p>2 dl riven ost (t.ex. Västerbottenost eller cheddar)</p>
+            <p>Salt och peppar</p>
+        </div>
+    </section>
+
+    <!-- Instruktioner Section -->
+    <section class="recipes">
+        <h2>👨‍🍳 Instruktioner:</h2>
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="pajdegStep1"> Steg 1 - Pajdeg</h3>
+            <label for="pajdegStep1">
+                <p>Nyp ihop mjöl och smör till en smulig deg. Tillsätt vatten och arbeta ihop. Låt vila i kylen i 30 minuter.</p>
+            </label>
+        </div>
+
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="pajdegStep2"> Steg 2 - Förgrädda pajdeg</h3>
+            <label for="pajdegStep2">
+                <p>Kavla ut degen och klä en pajform. Förgrädda i 200°C i 10 minuter.</p>
+            </label>
+        </div>
+
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="fyllningStep1"> Steg 3 - Fyllning</h3>
+            <label for="fyllningStep1">
+                <p>Ångkoka eller koka broccolibuketterna i 2–3 minuter. Stek purjolöken tills den mjuknar.</p>
+            </label>
+        </div>
+
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="fyllningStep2"> Steg 4 - Fyllning fortsättning</h3>
+            <label for="fyllningStep2">
+                <p>Vispa ihop ägg, grädde, mjölk och ost. Krydda med salt och peppar. Lägg broccoli och purjolök i det förgräddade pajskalet och häll över äggstanningen.</p>
+            </label>
+        </div>
+
+        <div class="recipe-card">
+            <h3><input type="checkbox" id="pajStep2"> Steg 5 - Grädda</h3>
+            <label for="pajStep2">
+                <p>Grädda i 200°C i ca 30 minuter tills pajen stelnat och fått fin färg.</p>
+            </label>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="tips">
+        <h3><span class="circle-icon">💡</span> Tips:</h3>
+        <p>Servera med en enkel grönsallad. Byt ut grädden mot crème fraiche för en fylligare smak. För en vegansk variant, använd en pajdeg utan smör och byt ut äggstanningen mot en blandning av havregrädde och kikärtsmjöl.</p>
+    </section>
+
+    <!-- Timer -->
+    <section class="timer-wrapper">
+        <h2><span class="circle-icon">⏰</span> Timer:</h2>
+        <div>
+            <label for="set-time">Ställ in tid (i minuter):</label>
+            <input type="number" id="set-time" min="1" value="30"> minuter
+        </div>
+        <div id="timer">30:00</div>
+        <button onclick="startTimer()">Starta timer</button>
+        <button onclick="stopTimer()">Stoppa timer</button>
+        <button onclick="resetTimer()">Återställ timer</button>
+    </section>
+
+    <!-- Back Link -->
+    <div class="back-link">
+        <a href="recept.html" class="back-button">Tillbaka till receptlistan</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Matleken UF - Alla rättigheter reserverade.</p>
+    </footer>
+
+    <script>
+        let timer;
+        let isRunning = false;
+        let seconds = 0;
+        let minutes = 30;  // Standardvärde för minuter, kan ändras av användaren
+    
+        // Starta timern
+        function startTimer() {
+            if (isRunning) return; // Om timern redan är igång, gör ingenting
+            isRunning = true;
+    
+            // Hämta användarens inmatade tid från inputfältet
+            let inputTime = document.getElementById("set-time").value;
+            minutes = parseInt(inputTime);  // Sätt minuter till användarens input
+            seconds = 0;  // Återställ sekunderna till 0 när vi startar om timern
+    
+            // Uppdatera timer på sidan när användaren ställer in tiden
+            document.getElementById("timer").innerText = formatTime(minutes, seconds);
+    
+            timer = setInterval(function() {
+                if (seconds === 0 && minutes === 0) {
+                    clearInterval(timer);  // Stoppar timern när den når 00:00
+                    alert("Tiden är slut!");
+                    isRunning = false;  // Ändra isRunning till false när tiden är slut
+                    return;
+                }
+    
+                // Minska sekunderna
+                if (seconds === 0) {
+                    if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                    }
+                } else {
+                    seconds--;
+                }
+    
+                // Uppdatera timer på sidan
+                document.getElementById("timer").innerText = formatTime(minutes, seconds);
+            }, 1000);
+        }
+    
+        // Stoppa timern
+        function stopTimer() {
+            clearInterval(timer);  // Stoppar timern
+            isRunning = false;
+        }
+    
+        // Återställ timern
+        function resetTimer() {
+            clearInterval(timer);  // Stoppar den aktuella timern
+            isRunning = false;
+            seconds = 0;
+    
+            // Hämta användarens valda starttid från inputfältet
+            let inputTime = document.getElementById("set-time").value;
+            minutes = parseInt(inputTime);  // Uppdatera minuter till det angivna värdet
+    
+            // Uppdatera timer-texten för att matcha starttiden
+            document.getElementById("timer").innerText = formatTime(minutes, seconds);
+        }
+    
+        // Format för att visa tiden på formatet MM:SS
+        function formatTime(minutes, seconds) {
+            return (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+        }
+    </script>
+
+</body>
+</html>
